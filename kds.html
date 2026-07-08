@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F5C800">
+<title>OOZY COFFEE KDS v2</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#fff;
+  --ink:#171a16;
+  --line:#111;
+  --green:#315a22;
+  --eat:#ffe8e4;
+  --take:#e6f0ff;
+  --oozy:#e8f5e7;
+  --delivery:#ffe2bd;
+  --pickup:#f1e7ff;
+  --ice:#246fb9;
+  --hot:#bd4b37;
+  --option:#8a4b16;
+  --warn:#b2572f;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink);height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+button{font:inherit;}
+.topbar{height:34px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;padding:4px 6px;background:#1f3718;color:#fff;border-bottom:1px solid var(--line);flex-shrink:0;}
+.top-logo{font-size:15px;font-weight:800;white-space:nowrap;color:#fff;}
+.top-right{display:flex;gap:4px;align-items:center;justify-content:flex-end;min-width:0;}
+.sync-dot{width:8px;height:8px;border-radius:50%;background:#62c45a;flex:0 0 auto;}
+.sync-dot.err{background:#e24b4a;}
+.top-time{font-size:14px;font-weight:800;color:#f3c641;white-space:nowrap;}
+.top-count,.page-indicator{border:1px solid rgba(255,255,255,.25);padding:3px 6px;border-radius:4px;font-size:12px;font-weight:800;background:transparent;color:#fff;white-space:nowrap;}
+.page-btn{width:24px;height:24px;border:1px solid rgba(255,255,255,.55);border-radius:3px;background:rgba(255,255,255,.12);color:#fff;font-size:15px;font-weight:900;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;}
+.page-btn:disabled{opacity:.35;cursor:default;}
+.top-right button[onclick="playAlert()"]{display:none!important;}
+.view-mode-btn,.settings-btn,.show-done-btn,.undo-btn{border:1px solid var(--line);border-radius:4px;background:#fff;color:#111;font-size:11px;font-weight:800;padding:3px 7px;cursor:pointer;}
+.undo-btn{background:#111;color:#f3c641;}
+.undo-btn:disabled{opacity:.35;cursor:default;}
+
+.order-grid{flex:1;height:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(1,minmax(0,1fr));align-content:start;gap:0;padding:4px;overflow:auto;touch-action:pan-y;user-select:none;background:#fff;}
+.order-grid.slide-next .order-card{animation:slideInNext .18s ease-out both;}
+.order-grid.slide-prev .order-card{animation:slideInPrev .18s ease-out both;}
+@keyframes slideInNext{from{opacity:.35;transform:translateX(28px);}to{opacity:1;transform:translateX(0);}}
+@keyframes slideInPrev{from{opacity:.35;transform:translateX(-28px);}to{opacity:1;transform:translateX(0);}}
+
+.order-card{min-height:174px;background:#fff;border:1px solid var(--line);margin:-1px 0 0 -1px;display:grid;grid-template-rows:33px 1fr;position:relative;overflow:hidden;border-radius:0;box-shadow:none;}
+.order-card::after{content:"";position:absolute;top:0;bottom:0;right:42px;width:1px;background:var(--line);pointer-events:none;}
+.order-card.urgent{outline:3px solid rgba(178,87,47,.22);outline-offset:-3px;}
+.order-card.done{opacity:.8;background:#f5f5f5;}
+.menu-item.cancelled-item{background:#fff;}
+.menu-item.cancelled-item .menu-name{background:#050505;color:#fff!important;padding:2px 6px;display:inline-block;width:fit-content;max-width:100%;justify-self:start;align-self:start;border-radius:3px;line-height:1.18;}
+.menu-item.cancelled-item .menu-qty{color:#111!important;}
+.menu-item.cancelled-item .opt-text{color:var(--option)!important;}
+.order-card.eat .card-head,.order-card.eat .time-cell{background:var(--eat);}
+.order-card.take .card-head,.order-card.take .time-cell{background:var(--take);}
+.order-card.app .card-head,.order-card.app .time-cell{background:var(--oozy);}
+.order-card.delivery .card-head,.order-card.delivery .time-cell{background:var(--delivery);}
+.order-card.pickup .card-head,.order-card.pickup .time-cell{background:var(--pickup);}
+
+.card-head{display:grid;grid-template-columns:74px 1fr 42px;border-bottom:1px solid var(--line);background:#fff;min-width:0;height:33px;}
+.call-cell{border:0;border-right:1px solid var(--line);background:#fff;color:#111;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:3px;min-width:0;overflow:hidden;white-space:nowrap;}
+.call-cell.called{background:#315a22;color:#fff;}
+.meta{display:grid;place-items:center;min-width:0;padding:0 3px;font-size:14px;font-weight:600;color:#111;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;border:0;background:transparent;font-family:inherit;}
+.time-cell{display:grid;place-items:center;font-size:13px;font-weight:600;color:#111;}
+
+.type-bar{border:0;background:var(--green);color:#fff;font-size:12px;font-weight:900;cursor:pointer;display:grid;grid-template-columns:74px 1fr 42px;align-items:center;height:22px;border-bottom:1px solid var(--line);}
+.type-bar::before{content:"\C644\B8CC";grid-column:1;justify-self:stretch;align-self:stretch;display:grid;place-items:center;background:rgba(0,0,0,.16);border-right:1px solid rgba(255,255,255,.28);}
+.type-label{grid-column:2;justify-self:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;font-size:12px;}
+.type-time{grid-column:3;font-size:0;}
+.type-bar.urgent{background:var(--warn);}
+
+.card-body{display:grid;align-content:start;padding:0;gap:2px;overflow:auto;min-height:0;}
+.delivery-note{padding:3px 6px;border-top:1px solid var(--line);background:#fff7cf;color:#5c3600;border-radius:0;font-size:11px;font-weight:500;line-height:1.2;word-break:keep-all;margin:2px 0 0 0;}
+.delivery-note-label{display:inline-block;margin-right:5px;color:#8a4b16;font-weight:600;}
+.menu-item{width:100%;border:0;background:#fff;text-align:left;padding:4px 0 4px 6px;min-height:28px;cursor:pointer;display:grid;grid-template-columns:1fr 28px;grid-template-areas:"name qty" "opts qty";align-items:start;border-bottom:0;border-radius:0;}
+.menu-item.made{background:#eee8dc;opacity:1;}
+.menu-item.made .menu-name,.menu-item.made .opt-text{color:#8b867d;}
+.menu-row{display:contents;}
+.menu-name{grid-area:name;font-size:var(--menu-name-size,15px);font-weight:500;line-height:1.14;word-break:keep-all;padding-right:5px;color:#111;}
+.menu-name.temp-ice{color:var(--ice);}
+.menu-name.temp-hot{color:var(--hot);}
+.menu-name.temp-ice::after{content:"ICE";display:inline-block;margin-left:4px;padding:1px 4px;border-radius:3px;font-size:10px;line-height:1.1;color:#fff;background:var(--ice);font-weight:800;vertical-align:1px;}
+.menu-name.temp-hot::after{content:"HOT";display:inline-block;margin-left:4px;padding:1px 4px;border-radius:3px;font-size:10px;line-height:1.1;color:#fff;background:var(--hot);font-weight:800;vertical-align:1px;}
+.menu-name.special-menu,.menu-name.matcha-parfait{color:#111;}
+.menu-qty{grid-area:qty;align-self:start;justify-self:stretch;width:100%;display:block;background:transparent;color:#111;font-size:14px;font-weight:900;white-space:nowrap;margin:0;padding-top:0;line-height:1.14;text-align:center;}
+.opt-list{grid-area:opts;margin-top:3px;padding-left:8px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px;color:#111;font-size:11px;line-height:1.18;font-weight:500;}
+.opt-row{display:flex;align-items:flex-start;gap:3px;min-width:0;white-space:normal;color:#111;}
+.opt-arrow{display:inline-block;color:#111;font-size:10px;line-height:1.18;padding-top:1px;flex:0 0 auto;}
+.opt-text{font-size:11px;color:#111;line-height:1.18;font-weight:500;min-width:0;word-break:keep-all;overflow-wrap:anywhere;}
+.opt-text.request{display:inline-block;color:#8a4b16;background:#fff7cf;border:1px solid #e6c979;border-radius:3px;padding:1px 5px;}
+.opt-text.tumbler{display:inline;color:#111;background:transparent;border:0;border-radius:0;padding:0;font-weight:500;}
+.card-foot{display:none;}
+
+.done-card{background:#f5f5f5;border:1px solid #ddd;margin:-1px 0 0 -1px;padding:8px;display:flex;flex-direction:column;gap:4px;opacity:.75;min-height:150px;}
+.done-label{font-size:10px;background:#eaf4df;color:#2f6d13;border-radius:999px;padding:2px 7px;font-weight:800;width:fit-content;}
+.done-no{font-size:18px;color:#111;font-weight:900;}
+.done-dept{font-size:13px;font-weight:800;color:#555;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.done-time{font-size:11px;color:#777;}
+.empty-state{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#777;gap:10px;height:calc(100vh - 84px);}
+.empty-icon{font-size:40px;}
+.empty-text{font-size:14px;color:#777;}
+.empty-detail{font-size:12px;font-weight:700;color:#a32d2d;max-width:88vw;text-align:center;line-height:1.45;white-space:pre-wrap;}
+
+.bottombar{height:32px;background:#f6f1d2;padding:4px 6px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:center;flex-shrink:0;}
+.stat{display:flex;align-items:center;gap:4px;}
+.stat-label{font-size:11px;color:#555;}
+.stat-val{font-size:12px;font-weight:800;color:#111;}
+.stat-val.red{color:#a32d2d;}
+.stat-val.green{color:#315a22;}
+
+.settings-overlay,.diagnostics-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:9999;padding:12px;}
+.settings-overlay.show,.diagnostics-overlay.show{display:flex;}
+.settings-box{background:#fff;border-radius:8px;padding:20px;width:min(400px,90vw);max-height:calc(100vh - 24px);display:flex;flex-direction:column;gap:12px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:28px;}
+.settings-box h2{font-size:16px;font-weight:900;}
+.settings-box label{font-size:13px;color:#555;margin-bottom:2px;display:block;}
+.settings-box input{width:100%;padding:8px 10px;border:1px solid #bbb;border-radius:4px;font-size:14px;font-family:inherit;}
+.settings-save{width:100%;padding:10px;background:#315a22;color:#fff;border:none;border-radius:4px;font-size:14px;font-weight:900;cursor:pointer;font-family:inherit;margin-top:4px;}
+.layout-btn-group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;}
+.layout-btn{border:1px solid #bbb;background:#fff;color:#111;border-radius:4px;padding:8px 0;font-family:inherit;font-size:13px;font-weight:900;cursor:pointer;}
+.layout-btn.active{background:#315a22;border-color:#315a22;color:#fff;}
+.diagnostics-box{width:min(900px,92vw);max-height:82vh;background:#fff;border-radius:8px;display:flex;flex-direction:column;overflow:hidden;}
+.diagnostics-head{background:#315a22;color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;font-weight:900;}
+.diagnostics-close{border:1px solid #111;background:#fff;border-radius:4px;padding:5px 10px;font-family:inherit;font-weight:900;cursor:pointer;}
+.diagnostics-body{padding:14px;overflow:auto;font-size:12px;line-height:1.45;white-space:pre-wrap;font-family:Consolas,"Malgun Gothic",monospace;}
+.top-recipe-btn{border:1px solid rgba(255,255,255,.65);border-radius:4px;background:#f3c641;color:#111;font-size:11px;font-weight:900;padding:3px 7px;cursor:pointer;white-space:nowrap;}
+.menu-qty.recipe-open{border:0;background:transparent;cursor:pointer;}
+.recipe-overlay{position:fixed;inset:0;background:rgba(0,0,0,.58);display:none;align-items:center;justify-content:center;z-index:9998;}
+.recipe-overlay.show{display:flex;}
+.recipe-box{width:min(760px,94vw);max-height:86vh;background:#fff;border:2px solid #111;border-radius:8px;display:flex;flex-direction:column;overflow:hidden;}
+.recipe-head{background:#315a22;color:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px;}
+.recipe-title{flex:1;text-align:center;font-size:19px;font-weight:900;line-height:1.25;word-break:keep-all;}
+.recipe-close{border:1px solid #111;background:#fff;color:#111;border-radius:4px;padding:6px 10px;font-family:inherit;font-weight:900;cursor:pointer;}
+.recipe-body{overflow:auto;background:#fff;color:#111;}
+.recipe-option-box{border-bottom:1px solid #111;padding:8px 12px;background:#fff7cf;font-size:13px;font-weight:800;white-space:pre-wrap;}
+.recipe-meta,.recipe-card{display:grid;grid-template-columns:142px 96px 1fr;border-bottom:1px solid #111;}
+.recipe-meta{background:#e8f5e7;font-weight:900;}
+.recipe-meta-cell{padding:8px 10px;border-right:1px solid #111;text-align:center;font-size:13px;}
+.recipe-meta-cell:last-child{border-right:0;}
+.recipe-name-cell{display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;padding:12px 8px;border-right:1px solid #111;background:#f1f7ef;font-size:16px;font-weight:900;line-height:1.22;word-break:keep-all;overflow-wrap:anywhere;}
+.recipe-name-cell .recipe-temp{display:block;margin-top:7px;color:#1a5fc4;font-size:14px;}
+.recipe-size-cell{display:flex;align-items:center;justify-content:center;padding:8px 6px;border-right:1px solid #111;color:#1a5fc4;font-size:14px;font-weight:900;text-align:center;min-width:0;overflow:hidden;}
+.recipe-main-cell{padding:13px 15px;font-size:15px;line-height:1.55;font-weight:850;}
+.recipe-line{margin:0 0 7px;}
+.recipe-line:last-child{margin-bottom:0;}
+.recipe-line-num{font-weight:900;margin-right:4px;}
+.recipe-duldalge,.recipe-caution{margin-top:7px;color:#c0392b;font-weight:900;}
+.recipe-note{margin-top:7px;font-size:13px;line-height:1.45;color:#444;}
+.recipe-actions{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;}
+.recipe-action{border:1px solid #111;background:#f3c641;color:#111;border-radius:4px;padding:5px 9px;font-size:12px;font-family:inherit;font-weight:900;cursor:pointer;}
+.recipe-action.secondary{background:#fff;}
+.recipe-edit-form{padding:14px;border-top:1px solid #111;background:#fff7cf;}
+.recipe-form-row{margin-bottom:9px;}
+.recipe-form-row label{display:block;font-size:12px;font-weight:900;margin-bottom:4px;color:#444;}
+.recipe-form-row input,.recipe-form-row textarea{width:100%;box-sizing:border-box;border:1px solid #111;border-radius:4px;padding:9px;font-family:inherit;font-size:14px;font-weight:800;background:#fff;}
+.recipe-form-row textarea{min-height:130px;line-height:1.45;resize:vertical;}
+.recipe-form-grid{display:grid;grid-template-columns:1fr 96px 96px;gap:8px;}
+.recipe-text{font-size:15px;line-height:1.45;white-space:pre-wrap;font-weight:700;}
+.recipe-empty{color:#a32d2d;font-weight:900;}
+.recipe-library-tools{padding:10px 12px;border-bottom:1px solid #111;background:#fff7cf;}
+.recipe-library-search{width:100%;padding:9px 10px;border:1px solid #111;border-radius:4px;font-family:inherit;font-size:14px;font-weight:800;}
+.recipe-category-row{display:flex;gap:6px;overflow:auto;margin-top:8px;padding-bottom:2px;}
+.recipe-category-btn{border:1px solid #ccc;background:#fff;color:#111;border-radius:999px;padding:6px 10px;font-family:inherit;font-size:12px;font-weight:900;white-space:nowrap;cursor:pointer;}
+.recipe-category-btn.active{background:#f3c641;border-color:#111;}
+.recipe-library-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px;}
+.recipe-library-item{border:1px solid #ddd;border-radius:6px;background:#fff;padding:9px 10px;text-align:left;font-family:inherit;cursor:pointer;}
+.recipe-library-name{display:block;font-size:14px;font-weight:900;color:#111;line-height:1.25;}
+.recipe-library-meta{display:block;margin-top:4px;font-size:11px;font-weight:800;color:#666;}
+.size-badge{display:inline-block;max-width:100%;font-size:11px;font-weight:500;padding:3px 8px;border-radius:4px;white-space:normal;line-height:1.18;text-align:center;word-break:keep-all;}
+.recipe-library-item .size-badge{margin-top:7px;}
+
+@media(max-width:900px){
+  .order-card{min-height:166px;}
+  .menu-name{font-size:var(--menu-name-size,15px);}
+  .recipe-meta,.recipe-card{grid-template-columns:112px 76px 1fr;}
+  .recipe-library-list{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- 설정 패널 -->
+<div class="settings-overlay" id="settingsOverlay" onclick="closeSettings(event)">
+  <div class="settings-box">
+    <h2>⚙️ KDS 설정</h2>
+    <div>
+      <label>POS IP 주소</label>
+      <input type="text" id="setPosIp" placeholder="192.168.0.222">
+    </div>
+    <div>
+      <label>포트 번호</label>
+      <input type="text" id="setPosPort" placeholder="5432">
+    </div>
+    <div>
+      <label>인증 토큰 (Bearer 뒤 값)</label>
+      <input type="text" id="setToken" placeholder="evWo+UDC222IUvXBaMo3qQ==">
+    </div>
+    <div>
+      <label>DID storeCode</label>
+      <input type="text" id="setDidStoreCode" placeholder="FSY003341">
+    </div>
+    <div>
+      <label>폴링 주기 (초)</label>
+      <input type="number" id="setInterval" placeholder="1" min="1" max="10">
+    </div>
+    <div>
+      <label>제품명 글씨 크기 (px)</label>
+      <input type="number" id="setMenuNameSize" placeholder="15" min="11" max="24">
+    </div>
+    <div>
+      <label>업데이트 version.json 주소</label>
+      <input type="text" id="setUpdateManifestUrl" placeholder="https://raw.githubusercontent.com/.../version.json">
+    </div>
+    <div>
+      <label>레시피 recipes.json 주소</label>
+      <input type="text" id="setRecipeDataUrl" placeholder="비우면 kds.html과 같은 폴더의 recipes.json 사용">
+    </div>
+    <div>
+      <label>배열 모드</label>
+      <div class="layout-btn-group">
+        <button class="layout-btn" data-layout="1x2" onclick="setLayout('1x2')" type="button">1x2</button>
+        <button class="layout-btn" data-layout="1x3" onclick="setLayout('1x3')" type="button">1x3</button>
+        <button class="layout-btn" data-layout="1x4" onclick="setLayout('1x4')" type="button">1x4</button>
+        <button class="layout-btn" data-layout="2x2" onclick="setLayout('2x2')" type="button">2x2</button>
+        <button class="layout-btn" data-layout="2x3" onclick="setLayout('2x3')" type="button">2x3</button>
+        <button class="layout-btn" data-layout="2x4" onclick="setLayout('2x4')" type="button">2x4</button>
+      </div>
+    </div>
+    <button class="settings-save" onclick="saveSettings()">저장 후 적용</button>
+  </div>
+</div>
+
+<div class="diagnostics-overlay" id="diagnosticsOverlay" onclick="closeDiagnostics(event)">
+  <div class="diagnostics-box">
+    <div class="diagnostics-head">
+      <span>주문형태 진단</span>
+      <button class="diagnostics-close" onclick="hideDiagnostics()">닫기</button>
+    </div>
+    <pre class="diagnostics-body" id="diagnosticsBody">주문을 불러오는 중...</pre>
+  </div>
+</div>
+
+<div class="recipe-overlay" id="recipeOverlay" onclick="closeRecipe(event)">
+  <div class="recipe-box">
+    <div class="recipe-head">
+      <div class="recipe-title" id="recipeTitle">레시피</div>
+      <button class="recipe-close" id="recipeCloseBtn" onclick="goBackOrHideRecipe()">닫기</button>
+    </div>
+    <div class="recipe-body" id="recipeBody"></div>
+  </div>
+</div>
+
+<div class="topbar">
+  <span class="top-logo">OOZY COFFEE KDS</span>
+  <div class="top-right">
+    <span class="sync-dot" id="syncDot"></span>
+    <span class="top-time" id="topTime"></span>
+    <button class="page-btn" id="pagePrevBtn" onclick="movePage(-1)">‹</button>
+    <span class="page-indicator" id="pageIndicator">1/1</span>
+    <button class="page-btn" id="pageNextBtn" onclick="movePage(1)">›</button>
+    <button onclick="playAlert()" style="background:none;border:1px solid #111;border-radius:10px;font-size:11px;padding:3px 8px;cursor:pointer;color:#111;">🔔</button>
+    <button class="top-recipe-btn" onclick="openRecipeLibrary()">레시피</button>
+    <span class="top-count" id="topCount">대기 0건</span>
+  </div>
+</div>
+
+<div class="order-grid" id="orderGrid">
+  <div class="empty-state">
+    <div class="empty-icon">☕</div>
+    <div class="empty-text">주문을 기다리는 중...</div>
+  </div>
+</div>
+
+<div class="bottombar">
+  <div class="stat"><span class="stat-label">대기</span><span class="stat-val" id="statPending">0건</span></div>
+  <div class="stat"><span class="stat-label">완료</span><span class="stat-val green" id="statDone">0건</span></div>
+  <div class="stat"><span class="stat-label">5분초과</span><span class="stat-val red" id="statUrgent">0건</span></div>
+  <button class="undo-btn" onclick="undoLastComplete()" id="undoBtn" disabled>직전 취소</button>
+  <button class="settings-btn" onclick="openDiagnostics()">진단</button>
+  <button class="settings-btn" onclick="openSettings()">⚙️ 설정</button>
+  <button class="show-done-btn" onclick="toggleDone()" id="showDoneBtn">완료 내역 보기</button>
+</div>
+
+<script>
+// ── 설정 ──
+const DEFAULT = {
+  posIp: '192.168.0.222',
+  posPort: '5432',
+  token: 'evWo+UDC222IUvXBaMo3qQ==',
+  didStoreCode: 'FSY003341',
+  updateManifestUrl: '',
+  recipeDataUrl: '',
+  menuNameSize: 15,
+  pollInterval: 1
+};
+const LAYOUT_MODES = ['1x2','1x3','1x4','2x2','2x3','2x4'];
+const DEFAULT_LAYOUT = '1x4';
+
+function loadConfig() {
+  try {
+    const s = localStorage.getItem('kds_config');
+    const cfg = s ? {...DEFAULT, ...JSON.parse(s)} : {...DEFAULT};
+    if(window.AndroidKds && AndroidKds.getUpdateManifestUrl) {
+      const nativeUpdateUrl = AndroidKds.getUpdateManifestUrl();
+      if(nativeUpdateUrl && !cfg.updateManifestUrl) cfg.updateManifestUrl = nativeUpdateUrl;
+    }
+    return cfg;
+  } catch(e) { return {...DEFAULT}; }
+}
+function saveConfig(cfg) {
+  localStorage.setItem('kds_config', JSON.stringify(cfg));
+  if(window.AndroidKds && AndroidKds.setUpdateManifestUrl) {
+    AndroidKds.setUpdateManifestUrl(cfg.updateManifestUrl || '');
+  }
+}
+
+let config = loadConfig();
+let currentLayout = loadLayout();
+let pageSize = layoutCapacity(currentLayout);
+window.kdsMaxCards = pageSize;
+
+function loadLayout() {
+  const saved = localStorage.getItem('kdsLayout');
+  if(LAYOUT_MODES.includes(saved)) return saved;
+  const legacySize = parseInt(localStorage.getItem('kds_page_size'), 10);
+  if(legacySize === 8) return '2x4';
+  return DEFAULT_LAYOUT;
+}
+function layoutCapacity(mode) {
+  const [rows, cols] = String(mode || DEFAULT_LAYOUT).split('x').map(Number);
+  return rows * cols || 4;
+}
+function setLayout(mode) {
+  if(!LAYOUT_MODES.includes(mode)) mode = DEFAULT_LAYOUT;
+  currentLayout = mode;
+  pageSize = layoutCapacity(mode);
+  window.kdsMaxCards = pageSize;
+  localStorage.setItem('kdsLayout', mode);
+  localStorage.setItem('kds_page_size', String(pageSize));
+  kdsPage = 0;
+  applyLayout(mode);
+  updateLayoutButtons(mode);
+  updateViewModeButton();
+  render();
+}
+function applyLayout(mode = currentLayout) {
+  if(!LAYOUT_MODES.includes(mode)) mode = DEFAULT_LAYOUT;
+  const [rows, cols] = mode.split('x').map(Number);
+  const grid = document.getElementById('orderGrid');
+  if(!grid) return;
+  grid.dataset.layout = mode;
+  grid.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
+  grid.style.gridTemplateRows = `repeat(${rows}, minmax(0, 1fr))`;
+  window.kdsMaxCards = rows * cols;
+}
+function updateLayoutButtons(mode = currentLayout) {
+  document.querySelectorAll('.layout-btn[data-layout]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.layout === mode);
+  });
+}
+function applyMenuNameSize() {
+  const size = Math.max(11, Math.min(24, parseInt(config.menuNameSize, 10) || DEFAULT.menuNameSize));
+  config.menuNameSize = size;
+  document.documentElement.style.setProperty('--menu-name-size', size + 'px');
+}
+
+function openSettings() {
+  document.getElementById('setPosIp').value = config.posIp;
+  document.getElementById('setPosPort').value = config.posPort;
+  document.getElementById('setToken').value = config.token;
+  document.getElementById('setDidStoreCode').value = config.didStoreCode;
+  document.getElementById('setInterval').value = config.pollInterval;
+  document.getElementById('setMenuNameSize').value = config.menuNameSize || DEFAULT.menuNameSize;
+  document.getElementById('setUpdateManifestUrl').value = config.updateManifestUrl || '';
+  document.getElementById('setRecipeDataUrl').value = config.recipeDataUrl || '';
+  updateLayoutButtons(currentLayout);
+  document.getElementById('settingsOverlay').classList.add('show');
+}
+function closeSettings(e) {
+  if(e.target === document.getElementById('settingsOverlay'))
+    document.getElementById('settingsOverlay').classList.remove('show');
+}
+function saveSettings() {
+  config.posIp = document.getElementById('setPosIp').value.trim() || DEFAULT.posIp;
+  config.posPort = document.getElementById('setPosPort').value.trim() || DEFAULT.posPort;
+  config.token = document.getElementById('setToken').value.trim() || DEFAULT.token;
+  config.didStoreCode = document.getElementById('setDidStoreCode').value.trim() || DEFAULT.didStoreCode;
+  config.pollInterval = parseInt(document.getElementById('setInterval').value) || 1;
+  config.menuNameSize = Math.max(11, Math.min(24, parseInt(document.getElementById('setMenuNameSize').value, 10) || DEFAULT.menuNameSize));
+  config.updateManifestUrl = document.getElementById('setUpdateManifestUrl').value.trim();
+  config.recipeDataUrl = document.getElementById('setRecipeDataUrl').value.trim();
+  applyMenuNameSize();
+  saveConfig(config);
+  if(window.AndroidKds && AndroidKds.checkForUpdate) AndroidKds.checkForUpdate();
+  document.getElementById('settingsOverlay').classList.remove('show');
+  loadRecipes(true);
+  restartPolling();
+}
+
+// ── 상태 ──
+let activeOrders = [];   // 현재 대기/제조중 주문
+let doneOrders = [];     // 완료된 주문 (로컬 보관)
+let showDone = false;
+let kdsPage = 0;
+let pageAnim = '';
+let pageLocked = false;
+let madeItems = {};      // {orderSeq_itemIdx: true}
+let knownSeqs = new Set();
+let pollTimer = null;
+let audioCtx = null;
+let lastRawOrders = [];
+let lastCompletedOrder = null;
+let lastPollError = '';
+let WOOJI_RECIPE_ROWS = [];
+let currentRecipeName = '';
+let currentRecipeOptions = [];
+let currentRecipeList = [];
+let recipeBackState = null;
+
+// ── API 호출 ──
+function getPosTarget() {
+  return `http://${config.posIp}:${config.posPort}`;
+}
+
+async function kdsPost(url, body) {
+  if(window.AndroidKds && AndroidKds.postJson) {
+    const text = AndroidKds.postJson(url, JSON.stringify(body || {}), config.token || DEFAULT.token, getPosTarget());
+    try {
+      const data = JSON.parse(text);
+      if(String(data.resultCode || '') === '9999') throw new Error(data.resultMessage || 'POS API failed');
+      return data;
+    } catch(e) {
+      if(e && e.message && e.message !== text) throw e;
+      throw new Error(text || 'POS API response parse failed');
+    }
+  }
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + config.token
+    },
+    body: JSON.stringify(body || {})
+  });
+  return await res.json();
+}
+
+async function kdsPostNoResult(url, body) {
+  if(window.AndroidKds && AndroidKds.postJsonFireAndForget) {
+    AndroidKds.postJsonFireAndForget(url, JSON.stringify(body || {}), config.token || DEFAULT.token, getPosTarget());
+    return;
+  }
+  await kdsPost(url, body);
+}
+
+async function fetchOrders() {
+  const url = `/api/kds/selectAllList`;
+  const body = {
+    detailSortType: "0",
+    isRequireReturnKdsList: true,
+    isUseKdsNoInOfferMode: false,
+    kdsViewType: "2",
+    latestTime: 0,
+    maxHeaderCount: 99,
+    searchKeyword: ""
+  };
+  return await kdsPost(url, body);
+}
+
+// ── 완료 처리 API ──
+async function updateOrderCookStatusApi(order, cookStatus) {
+  const url = `/api/kds/updateItem`;
+  const details = order._raw.ordKdsDetails || [];
+  const kdsItemList = details.map(d => ({
+    cookStatus: cookStatus,
+    index: d.index || ''
+  })).filter(d => d.index);
+  if(!kdsItemList.length) return;
+  try {
+    await kdsPostNoResult(url, {
+      detailSortType: "0",
+      isRequireReturnKdsList: true,
+      isUseKdsNoInOfferMode: false,
+      kdsItemList: kdsItemList,
+      kdsViewType: "2",
+      latestTime: 0,
+      maxHeaderCount: 99,
+      searchKeyword: ""
+    });
+  } catch(e) {
+    console.warn('KDS 상태 변경 API 실패, 로컬에서만 처리:', e);
+  }
+}
+
+async function completeOrderApi(order) {
+  return updateOrderCookStatusApi(order, '03');
+}
+
+async function restoreOrderApi(order) {
+  return updateOrderCookStatusApi(order, '02');
+}
+
+function getOrderWaitNo(order) {
+  return String(order.orderWaitNo || order._raw?.ordKdsDetails?.[0]?.orderWaitNo || order._raw?.ordKdsHeader?.kdsSeq || '').trim();
+}
+
+async function callDidApi(order) {
+  const waitNo = getOrderWaitNo(order);
+  if(!waitNo) throw new Error('waitNo not found');
+  const didStoreCode = String(config.didStoreCode || DEFAULT.didStoreCode).trim();
+  const storeCode = /^\d{6}$/.test(didStoreCode) ? 'FSY' + didStoreCode : didStoreCode;
+  const data = await kdsPost('/did/call', { storeCode, waitNo });
+  const didStatus = String(data?.data?.status || '').toLowerCase();
+  console.log('DID call response:', data);
+  if(data.ok === false || didStatus === 'fail' || didStatus === 'error') {
+    throw new Error(data?.data?.message || data?.message || 'DID call failed');
+  }
+  return data;
+}
+
+async function callOrderApi(order) {
+  await callDidApi(order);
+
+  const url = `/api/kds/updateItem`;
+  const details = order._raw.ordKdsDetails || [];
+  const kdsItemList = details.map(d => ({
+    callStatus: 'Y',
+    index: d.index || ''
+  })).filter(d => d.index);
+  if(!kdsItemList.length) return;
+  try {
+    await kdsPostNoResult(url, {
+      detailSortType: "0",
+      isRequireReturnKdsList: true,
+      isUseKdsNoInOfferMode: false,
+      kdsItemList: kdsItemList,
+      kdsViewType: "2",
+      latestTime: 0,
+      maxHeaderCount: 99,
+      searchKeyword: ""
+    });
+  } catch(e) {
+    console.warn('호출 API 실패:', e);
+  }
+}
+
+// ── 폴링 ──
+async function poll() {
+  try {
+    const data = await fetchOrders();
+    document.getElementById('syncDot').className = 'sync-dot';
+    lastPollError = '';
+
+    const items = data.kdsListItem || [];
+    lastRawOrders = items;
+
+    // 새 주문 감지 → 알림음
+    let hasNew = false;
+    items.forEach(order => {
+      const seq = String(order.ordKdsHeader?.kdsSeq || order.orderSeq || '');
+      if(seq && !knownSeqs.has(seq)) {
+        knownSeqs.add(seq);
+        hasNew = true;
+      }
+    });
+    if(hasNew) playAlert();
+
+    // 완료된 주문을 doneOrders에 이동
+    const prevSeqs = activeOrders.map(o => String(o._seq));
+    const newSeqs = items.map(o => String(o.ordKdsHeader?.kdsSeq || o.orderSeq || ''));
+
+    prevSeqs.forEach(seq => {
+      if(!newSeqs.includes(seq)) {
+        const order = activeOrders.find(o => String(o._seq) === seq);
+        if(order && !doneOrders.find(d => String(d._seq) === seq)) {
+          order._doneAt = Date.now();
+          doneOrders.unshift(order);
+          if(doneOrders.length > 50) doneOrders.pop();
+        }
+      }
+    });
+
+    activeOrders = items.map(mapOrder);
+    render();
+  } catch(e) {
+    document.getElementById('syncDot').className = 'sync-dot err';
+    lastPollError = `${getPosTarget()}\n${e?.message || e}`;
+    render();
+    console.error('폴링 오류:', e);
+  }
+}
+
+function mapOrder(raw) {
+  const header = raw.ordKdsHeader || {};
+  const details = raw.ordKdsDetails || [];
+  const seq = String(header.kdsSeq || raw.orderSeq || '');
+  const firstDetail = (raw.ordKdsDetails || [])[0] || {};
+  const waitNo = String(header.orderWaitNo || raw.orderWaitNo || firstDetail.orderWaitNo || '');
+  const orderTime = header.orderTime || raw.orderDateTime || '';
+  const route = getOrderRoute(raw);
+  const isTake = route.kind === 'take';
+  const cookStatus = String(raw.cookStatus || header.cookStatus || firstDetail.cookStatus || '00');
+  const tableNm = String(header.tableNm || raw.tableNm || '');
+  const isDelivery = route.kind === 'delivery';
+  const deliveryNotice = getDeliveryNotice(raw);
+  const customerRequest = getCustomerRequest(raw);
+
+  // 주문 시간 파싱
+  let createdAt = Date.now();
+  if(orderTime) {
+    const t = String(orderTime);
+    // 형식: "20260526152617" → yyyyMMddHHmmss
+    if(t.length >= 12) {
+      const y = t.slice(0,4), mo = t.slice(4,6), d = t.slice(6,8);
+      const h = t.slice(8,10), mi = t.slice(10,12), s = t.slice(12,14)||'00';
+      createdAt = new Date(`${y}-${mo}-${d}T${h}:${mi}:${s}`).getTime();
+    }
+  }
+
+  const items = details.map(d => ({
+    name: d.itemName || '',
+    qty: d.itemQty || 1,
+    opts: buildOpts(d),
+    isIce: (d.itemName||'').includes('(ICE)') || (d.itemName||'').toUpperCase().includes('ICE'),
+    isHot: (d.itemName||'').includes('(HOT)') || (d.itemName||'').toUpperCase().includes('HOT'),
+  }));
+
+  return {
+    _seq: seq,
+    _raw: raw,
+    waitNo,
+    isTake,
+    isDelivery,
+    route,
+    deliveryNotice,
+    customerRequest,
+    cookStatus,
+    createdAt,
+    items,
+    tableNm,
+    orderEmpName: header.orderEmpName || raw.orderEmpName || '',
+  };
+}
+
+function getDeliveryNotice(raw) {
+  const details = raw.ordKdsDetails || [];
+  const notices = details
+    .map(d => d.orderNotice || d.deliveryNotice || d.custRequest || d.customerRequest || '')
+    .filter(Boolean)
+    .map(v => String(v).trim())
+    .filter(Boolean);
+  return [...new Set(notices)].join(' / ');
+}
+
+function firstNonEmpty(...values) {
+  for(const value of values) {
+    const text = String(value || '').trim();
+    if(text) return text;
+  }
+  return '';
+}
+
+function requestFromObject(obj) {
+  if(!obj) return '';
+  return firstNonEmpty(
+    obj.customerRequest,
+    obj.custRequest,
+    obj.deliveryRequest,
+    obj.deliveryMemo,
+    obj.deliveryMessage,
+    obj.requestMemo,
+    obj.requestMessage,
+    obj.customerMemo,
+    obj.custMemo,
+    obj.customerRemark,
+    obj.custRemark,
+    obj.userMemo,
+    obj.userRequest,
+    obj.riderMemo,
+    obj.riderRequest
+  );
+}
+
+function getCustomerRequest(raw) {
+  const header = raw.ordKdsHeader || {};
+  const details = raw.ordKdsDetails || [];
+  const values = [
+    requestFromObject(raw),
+    requestFromObject(header),
+    ...details.map(requestFromObject)
+  ].filter(Boolean);
+  return [...new Set(values)].join(' / ');
+}
+
+function getOrderSignals(raw) {
+  const header = raw.ordKdsHeader || {};
+  const details = raw.ordKdsDetails || [];
+  const first = details[0] || {};
+  return {
+    deviceInfo: first.deviceInfo || raw.deviceInfo || header.deviceInfo || '',
+    orderTag: first.orderTag || raw.orderTag || header.orderTag || '',
+    tableNm: header.tableNm || raw.tableNm || first.tableNm || '',
+    posNo: first.posNo || raw.posNo || header.posNo || '',
+    orderEmpNo: first.orderEmpNo || raw.orderEmpNo || header.orderEmpNo || '',
+    orderEmpName: first.orderEmpName || raw.orderEmpName || header.orderEmpName || '',
+    orderNotice: getDeliveryNotice(raw),
+    callStatus: first.callStatus || raw.callStatus || header.callStatus || '',
+    orderWaitNo: header.orderWaitNo || raw.orderWaitNo || first.orderWaitNo || '',
+    posBillNo: first.posBillNo || raw.posBillNo || header.posBillNo || '',
+    orderUniqueNo: header.orderUniqueNo || raw.orderUniqueNo || first.orderUniqueNo || '',
+    takeOutFlag: first.takeOutFlag || raw.takeOutFlag || header.takeOutFlag || '',
+    etcOrderNo: first.etcOrderNo || raw.etcOrderNo || header.etcOrderNo || ''
+  };
+}
+
+function getOrderRoute(raw) {
+  const s = getOrderSignals(raw);
+  const waitNo = String(s.orderWaitNo || '').trim().toUpperCase();
+  const tableNm = String(s.tableNm || '').trim().toUpperCase();
+  const deviceInfo = String(s.deviceInfo || '').trim().toUpperCase();
+  const notice = String(s.orderNotice || '').trim().toUpperCase();
+  const text = [
+    s.deviceInfo, s.tableNm, s.posNo, s.orderEmpNo, s.orderEmpName, s.posBillNo, s.orderNotice
+  ].join(' ').toUpperCase();
+
+  const takeOutFlag = String(s.takeOutFlag || '').trim().toUpperCase();
+  const etcOrderNo = String(s.etcOrderNo || '').trim();
+  const isDeliverySignal = takeOutFlag === 'D' || tableNm === 'DELIVERY' || deviceInfo.includes('DELIVERY') || (waitNo === '0000' && etcOrderNo);
+
+  if(isDeliverySignal || /[A-Z]/.test(waitNo)) {
+    return {kind:'delivery', label:'배달 주문', className:'delivery'};
+  }
+
+  if((notice.includes('[픽업]') || notice.includes('픽업')) &&
+     (notice.includes('배달의민족') || notice.includes('배민') || notice.includes('BAEMIN'))) {
+    return {kind:'baeminPickup', label:'배민 픽업', className:'pickup'};
+  }
+
+  if(notice.includes('[픽업]') || notice.includes('픽업')) {
+    return {kind:'externalPickup', label:'외부 픽업', className:'pickup'};
+  }
+
+  if(tableNm.startsWith('CM') || tableNm.startsWith('DL') ||
+     text.includes('DELIVERY') || text.includes('BAEMIN') || text.includes('YOGIYO') ||
+     text.includes('COUPANG') || text.includes('배달') || text.includes('배민') ||
+     text.includes('요기요') || text.includes('쿠팡')) {
+    return {kind:'delivery', label:'배달 주문', className:'delivery'};
+  }
+
+  if(/^0\d{3}$/.test(waitNo) && waitNo !== '0000') {
+    return {kind:'woojiorder', label:'우지오더', className:'app'};
+  }
+
+  if(text.includes('우지오더') || text.includes('OOZY') || text.includes('OOZYORDER') || text.includes('WOOJI') || text.includes('WOOJIORDER') || text.includes('UJIORDER') || text.includes('MOBILEORDER') ||
+     text.includes('MOBILE_ORDER') || text.includes('APPORDER') ||
+     text.includes('APP_ORDER') || deviceInfo.includes('W_MATE')) {
+    return {kind:'woojiorder', label:'우지오더', className:'app'};
+  }
+
+  if(deviceInfo.includes('KIOSK')) {
+    return String(s.orderTag || '').toUpperCase() === 'T'
+      ? {kind:'take', label:'포장', className:'take'}
+      : {kind:'eat', label:'먹고가기', className:'eat'};
+  }
+
+  if(String(s.orderTag || '').toUpperCase() === 'T') {
+    return {kind:'take', label:'포장', className:'take'};
+  }
+  return {kind:'eat', label:'먹고가기', className:'eat'};
+}
+
+function buildOpts(detail) {
+  const opts = [];
+  // 샷추가, 옵션 등 ordKdsDetails 하위에 있는 서브메뉴 항목
+  if(detail.subMenuCount > 0 || detail.submenuType === 'Y') {
+    // 부모 아이템의 옵션들은 ordKdsDetails에 별도 행으로 들어있음
+    // itemName에 ▶ 표시가 있으면 옵션
+  }
+  return opts;
+}
+
+// ── 렌더 ──
+function ensureViewModeButton() {
+  const topRight = document.querySelector('.top-right');
+  if(!topRight || document.getElementById('viewModeBtn')) return;
+  const btn = document.createElement('button');
+  btn.className = 'view-mode-btn';
+  btn.id = 'viewModeBtn';
+  btn.onclick = toggleViewMode;
+  const topCount = document.getElementById('topCount');
+  topRight.insertBefore(btn, topCount || null);
+  updateViewModeButton();
+}
+
+function updateViewModeButton() {
+  const btn = document.getElementById('viewModeBtn');
+  if(btn) btn.textContent = currentLayout;
+}
+
+function toggleViewMode() {
+  const idx = LAYOUT_MODES.indexOf(currentLayout);
+  setLayout(LAYOUT_MODES[(idx + 1) % LAYOUT_MODES.length]);
+}
+
+function render() {
+  const grid = document.getElementById('orderGrid');
+  applyLayout(currentLayout);
+  grid.innerHTML = '';
+  ensureViewModeButton();
+
+  if(pageAnim) {
+    grid.classList.add(pageAnim);
+    setTimeout(() => grid.classList.remove('slide-next','slide-prev'), 260);
+    pageAnim = '';
+  }
+
+  const urgent = activeOrders.filter(o => isUrgent(o.createdAt));
+  document.getElementById('topCount').textContent = '대기 ' + activeOrders.length + '건';
+  document.getElementById('statPending').textContent = activeOrders.length + '건';
+  document.getElementById('statDone').textContent = doneOrders.length + '건';
+  document.getElementById('statUrgent').textContent = urgent.length + '건';
+  const undoBtn = document.getElementById('undoBtn');
+  if(undoBtn) undoBtn.disabled = !lastCompletedOrder;
+
+  const list = showDone ? doneOrders : activeOrders;
+
+  if(list.length === 0) {
+    const detail = (!showDone && lastPollError)
+      ? `<div class="empty-detail">POS 연결 실패\n${esc(lastPollError)}</div>`
+      : '';
+    grid.innerHTML = `<div class="empty-state">
+      <div class="empty-icon">☕</div>
+      <div class="empty-text">${showDone ? '완료된 주문이 없어요' : '주문을 기다리는 중...'}</div>
+      ${detail}
+    </div>`;
+    updatePageIndicator(0);
+    return;
+  }
+
+  let pageList = list;
+  if(!showDone) {
+    const total = Math.max(1, Math.ceil(list.length / pageSize));
+    if(kdsPage >= total) kdsPage = total - 1;
+    pageList = list.slice(kdsPage * pageSize, (kdsPage + 1) * pageSize);
+    updatePageIndicator(list.length);
+  } else {
+    updatePageIndicator(0);
+  }
+
+  pageList.forEach(order => {
+    if(showDone) {
+      grid.appendChild(makeDoneCard(order));
+    } else {
+      grid.appendChild(makeCard(order));
+    }
+  });
+}
+
+function makeCard(order) {
+  const urg = isUrgent(order.createdAt);
+  const routeClass = order.route?.className || (order.isTake ? 'take' : 'eat');
+  const routeLabel = order.route?.label || (order.isTake ? '포장' : '먹고가기');
+  const card = document.createElement('div');
+  card.className = 'order-card ' + routeClass + (urg ? ' urgent' : '');
+  const time = new Date(order.createdAt);
+  const timeStr = pad(time.getHours()) + ':' + pad(time.getMinutes());
+  const waitLabel = '#' + String(order.waitNo || order._seq || '').padStart(3, '0');
+  const head = document.createElement('div');
+  head.className = 'card-head';
+  head.innerHTML = '<button class="call-cell ' + (order._calledAt ? 'called' : '') + '" title="\uD638\uCD9C">' + esc(waitLabel) + '</button><button class="meta" title="\uC644\uB8CC \uCC98\uB9AC">' + esc(routeLabel) + '</button><div class="time-cell">' + timeStr + '</div>';
+  head.querySelector('.call-cell').addEventListener('click', () => callOrder(order));
+  head.querySelector('.meta').addEventListener('click', () => completeOrder(order));
+  card.appendChild(head);
+  const body = document.createElement('div');
+  body.className = 'card-body';
+  const rawDetails = order._raw.ordKdsDetails || [];
+  const displayDetails = orderOptionsFirst(rawDetails);
+  let parentIdx = -1;
+  displayDetails.forEach((d) => {
+    const name = d.itemName || '';
+    const isOpt = d.subMenuYn === 'Y' || d.submenuYn === 'Y' || name.startsWith('┗') || name.startsWith('- ') || name.startsWith('+ ');
+    if(!isOpt) parentIdx++;
+    const madeKey = order._seq + '_' + parentIdx;
+    const isMade = !!madeItems[madeKey];
+      const nameCls = [menuNameClass(name), tempClassFromText(d.orderTag)].filter(Boolean).join(' ');
+    const qty = d.itemQty || 1;
+    if(!isOpt) {
+      const itemKey = madeKey;
+      const div = document.createElement('button');
+      div.type = 'button';
+      const isItemCancelled = String(d.cookStatus || '').trim() === '02';
+      div.className = 'menu-item' + (isMade ? ' made' : '') + (isItemCancelled ? ' cancelled-item' : '');
+      div.onclick = () => toggleMadeKey(itemKey);
+      div.innerHTML = '<div class="menu-row"><span class="menu-name ' + nameCls + '">' + esc(cleanMenuName(name)) + '</span><span class="menu-qty recipe-open" title="수량을 누르면 레시피가 열립니다">' + (isMade ? '✓ ' : '') + qty + '</span></div>';
+      div.querySelector('.menu-qty').addEventListener('click', (e) => {
+        e.stopPropagation();
+        openRecipe(name, detailOptionsForRecipe(rawDetails, d));
+      });
+      body.appendChild(div);
+    } else {
+      const lastItem = body.lastElementChild;
+      if(lastItem && lastItem.classList.contains('menu-item')) {
+        const optName = cleanOptionName(name);
+        const tempCls = tempClassFromText(optName);
+        if(tempCls) {
+          const menuName = lastItem.querySelector('.menu-name');
+          if(menuName) {
+            menuName.classList.remove('temp-ice', 'temp-hot');
+            menuName.classList.add(tempCls);
+          }
+          return;
+        }
+        let optList = lastItem.querySelector('.opt-list');
+        if(!optList) { optList = document.createElement('div'); optList.className = 'opt-list'; lastItem.appendChild(optList); }
+        const optRow = document.createElement('div');
+        optRow.className = 'opt-row';
+        optRow.innerHTML = '<span class="opt-arrow">▶</span><span class="opt-text">' + esc(optName) + '</span>';
+        optList.appendChild(optRow);
+      }
+    }
+  });
+  if((order.isDelivery || order.route?.kind === 'baeminPickup' || order.route?.kind === 'externalPickup') && order.customerRequest) {
+    const note = document.createElement('div');
+    note.className = 'delivery-note';
+    const noteLabel = order.isDelivery ? '\uBC30\uB2EC\uC694\uCCAD' : '\uD53D\uC5C5\uC815\uBCF4';
+    note.innerHTML = '<span class="delivery-note-label">' + esc(noteLabel) + '</span> ' + esc(order.customerRequest);
+    body.appendChild(note);
+  }
+  card.appendChild(body);
+  return card;
+}
+
+function tempClassFromText(text) {
+  const normalized = String(text || '').replace(/\s+/g, ' ').trim().toUpperCase();
+  if(/^(ONLY\s+)?ICE$/.test(normalized) || /ONLY\s+ICE$/.test(normalized)) return 'temp-ice';
+  if(/^(ONLY\s+)?HOT$/.test(normalized) || /ONLY\s+HOT$/.test(normalized)) return 'temp-hot';
+  return '';
+}
+
+function cleanMenuName(name) {
+  return String(name || '')
+    .replace(/^\s*(┗|▶|┗▶|-|\+)\s*/g, '')
+    .replace(/\s*\(?\s*ONLY\s+ICE\s*\)?\s*$/i, '')
+    .replace(/\s*\(?\s*ONLY\s+HOT\s*\)?\s*$/i, '')
+    .replace(/\s*\(?\s*ICE\s*\)?\s*$/i, '')
+    .replace(/\s*\(?\s*HOT\s*\)?\s*$/i, '')
+    .trim();
+}
+
+function cleanOptionName(name) {
+  return String(name || '')
+    .replace(/^\s*(┗|▶|┗▶|-|\+)\s*/g, '')
+    .replace(/^ONLY\s+(ICE|HOT)$/i, '$1')
+    .trim();
+}
+
+function isOptionDetail(d) {
+  const name = d?.itemName || '';
+  return d?.subMenuYn === 'Y' || d?.submenuYn === 'Y' || name.startsWith('┗') || name.startsWith('- ') || name.startsWith('+ ');
+}
+
+function isTumblerOption(name) {
+  return /텀블러|tumbler/i.test(String(name || ''));
+}
+
+function orderOptionsFirst(details) {
+  const result = [];
+  let currentItem = null;
+  let options = [];
+  const flush = () => {
+    if(currentItem) result.push(currentItem);
+    options.sort((a, b) => {
+      const aTum = isTumblerOption(cleanOptionName(a.itemName || ''));
+      const bTum = isTumblerOption(cleanOptionName(b.itemName || ''));
+      return Number(bTum) - Number(aTum);
+    });
+    result.push(...options);
+    currentItem = null;
+    options = [];
+  };
+  (details || []).forEach(d => {
+    if(isOptionDetail(d)) {
+      options.push(d);
+      return;
+    }
+    flush();
+    currentItem = d;
+  });
+  flush();
+  return result;
+}
+function makeDoneCard(order) {
+  const card = document.createElement('div');
+  card.className = 'done-card';
+  const time = new Date(order._doneAt || order.createdAt);
+  const timeStr = pad(time.getHours()) + ':' + pad(time.getMinutes());
+  card.innerHTML = `
+    <div class="done-label">완료됨</div>
+    <div class="done-no">#${order.waitNo.padStart(3,'0')}</div>
+    <div class="done-dept">${esc(order.orderEmpName || '주문')}</div>
+    <div class="done-time">${timeStr} · ${esc(order.route?.label || (order.isTake ? '포장' : '먹고가기'))}</div>`;
+  return card;
+}
+
+// ── 완료 처리 ──
+function completeOrder(order) {
+  const header = order._raw.ordKdsHeader || {};
+  completeOrderApi(order);
+  // 로컬에서도 즉시 제거
+  activeOrders = activeOrders.filter(o => o._seq !== order._seq);
+  order._doneAt = Date.now();
+  lastCompletedOrder = order;
+  doneOrders.unshift(order);
+  if(doneOrders.length > 50) doneOrders.pop();
+  render();
+}
+
+async function undoLastComplete() {
+  if(!lastCompletedOrder) return;
+  const order = lastCompletedOrder;
+  lastCompletedOrder = null;
+  await restoreOrderApi(order);
+  doneOrders = doneOrders.filter(o => o._seq !== order._seq);
+  if(!activeOrders.find(o => o._seq === order._seq)) {
+    activeOrders.unshift(order);
+  }
+  render();
+}
+
+async function callOrder(order) {
+  const wasCalledAt = order._calledAt;
+  order._calledAt = Date.now();
+  render();
+
+  try {
+    await callOrderApi(order);
+  } catch(e) {
+    order._calledAt = wasCalledAt;
+    render();
+    console.warn('DID call failed:', e);
+    alert('호출 실패: ' + (e.message || e));
+  }
+}
+
+// ── 세부 제조완료 토글 ──
+function toggleMade(seq, idx) {
+  const key = seq + '_' + idx;
+  toggleMadeKey(key);
+}
+
+function toggleMadeKey(key) {
+  if(madeItems[key]) delete madeItems[key];
+  else madeItems[key] = true;
+  render();
+}
+
+// ── 유틸 ──
+function menuNameClass(name) {
+  const n = String(name || '');
+  const norm = n.replace(/\s/g,'');
+  if(norm.includes('말차젤라또') || norm.includes('팥빙수파르페')) return 'matcha-parfait';
+  if(norm.includes('우지리카노')) return 'special-menu';
+  if(tempClassFromText(n) === 'temp-ice' || n.includes('(ICE)') || /\bICE\b/.test(n.toUpperCase())) return 'temp-ice';
+  if(tempClassFromText(n) === 'temp-hot' || n.includes('(HOT)') || /\bHOT\b/.test(n.toUpperCase())) return 'temp-hot';
+  return '';
+}
+function isUrgent(createdAt) { return (Date.now() - createdAt) > 5*60*1000; }
+function getElapsed(createdAt) {
+  const sec = Math.floor((Date.now() - createdAt) / 1000);
+  if(sec < 60) return sec + '초';
+  return Math.floor(sec/60) + '분 ' + (sec%60) + '초';
+}
+function pad(n) { return String(n).padStart(2,'0'); }
+function esc(s) { return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+// ── 페이지 ──
+function updatePageIndicator(total) {
+  const el = document.getElementById('pageIndicator');
+  const prev = document.getElementById('pagePrevBtn');
+  const next = document.getElementById('pageNextBtn');
+  if(showDone || total <= pageSize) {
+    el.style.display = 'none';
+    prev.style.display = 'none';
+    next.style.display = 'none';
+    return;
+  }
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  el.style.display = '';
+  prev.style.display = '';
+  next.style.display = '';
+  el.textContent = (kdsPage+1) + '/' + totalPages;
+  prev.disabled = kdsPage <= 0;
+  next.disabled = kdsPage >= totalPages - 1;
+}
+function movePage(delta) {
+  if(pageLocked) return;
+  const total = Math.max(1, Math.ceil(activeOrders.length / pageSize));
+  const next = Math.max(0, Math.min(total-1, kdsPage + delta));
+  if(next === kdsPage) return;
+  pageLocked = true;
+  setTimeout(() => pageLocked = false, 340);
+  pageAnim = delta > 0 ? 'slide-next' : 'slide-prev';
+  kdsPage = next;
+  render();
+}
+
+// 스와이프
+let swipeX = 0, swipeY = 0;
+const grid = document.getElementById('orderGrid');
+grid.addEventListener('touchstart', e => { swipeX = e.touches[0].clientX; swipeY = e.touches[0].clientY; }, {passive:true});
+grid.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - swipeX;
+  const dy = e.changedTouches[0].clientY - swipeY;
+  if(Math.abs(dx) < 70 || Math.abs(dx) < Math.abs(dy)*1.4) return;
+  movePage(dx < 0 ? 1 : -1);
+}, {passive:true});
+
+// ── 완료내역 토글 ──
+function toggleDone() {
+  showDone = !showDone;
+  document.getElementById('showDoneBtn').textContent = showDone ? '주문 목록 보기' : '완료 내역 보기';
+  render();
+}
+
+// ── 주문형태 진단 ──
+function openDiagnostics() {
+  renderDiagnostics();
+  document.getElementById('diagnosticsOverlay').classList.add('show');
+}
+function hideDiagnostics() {
+  document.getElementById('diagnosticsOverlay').classList.remove('show');
+}
+function closeDiagnostics(e) {
+  if(e.target === document.getElementById('diagnosticsOverlay')) hideDiagnostics();
+}
+function renderDiagnostics() {
+  const body = document.getElementById('diagnosticsBody');
+  const source = activeOrders.length ? activeOrders.map(o => o._raw) : lastRawOrders;
+  if(!source.length) {
+    body.textContent = [
+      '현재 표시할 주문 데이터가 없습니다.',
+      '',
+      'POS 대상: ' + getPosTarget(),
+      '최근 오류: ' + (lastPollError || '없음'),
+      '설정 POS IP: ' + config.posIp,
+      '설정 POS 포트: ' + config.posPort
+    ].join('\n');
+    return;
+  }
+  const rows = source.map(raw => {
+    const route = getOrderRoute(raw);
+    const s = getOrderSignals(raw);
+    return {
+      판별결과: route.label,
+      판별코드: route.kind,
+      ...s
+    };
+  });
+  body.textContent = JSON.stringify(rows, null, 2);
+}
+
+// ── 레시피 ──
+async function loadRecipes(force = false) {
+  if(WOOJI_RECIPE_ROWS.length && !force) return WOOJI_RECIPE_ROWS;
+  const candidates = [];
+  if(config.recipeDataUrl) candidates.push(config.recipeDataUrl);
+  if(config.updateManifestUrl && !config.recipeDataUrl) {
+    try { candidates.push(new URL('recipes.json', config.updateManifestUrl).toString()); } catch(_) {}
+  }
+  candidates.push('recipes.json');
+  for(const url of candidates) {
+    try {
+      const res = await fetch(url, { cache: force ? 'reload' : 'no-cache' });
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      WOOJI_RECIPE_ROWS = Array.isArray(data.recipes) ? data.recipes : [];
+      if(WOOJI_RECIPE_ROWS.length) return WOOJI_RECIPE_ROWS;
+    } catch(e) {
+      console.warn('레시피 로드 실패:', url, e);
+    }
+  }
+  if(window.AndroidKds && AndroidKds.getAssetText) {
+    try {
+      const text = AndroidKds.getAssetText('recipes.json');
+      const data = JSON.parse(text || '{}');
+      WOOJI_RECIPE_ROWS = Array.isArray(data.recipes) ? data.recipes : [];
+      if(WOOJI_RECIPE_ROWS.length) return WOOJI_RECIPE_ROWS;
+    } catch(e) {
+      console.warn('내장 레시피 로드 실패:', e);
+    }
+  }
+  WOOJI_RECIPE_ROWS = [];
+  return WOOJI_RECIPE_ROWS;
+}
+
+function getRecipeOverrides() {
+  try { return JSON.parse(localStorage.getItem('wooji_recipe_overrides') || '{}'); }
+  catch(_) { return {}; }
+}
+function saveRecipeOverrides(overrides) {
+  localStorage.setItem('wooji_recipe_overrides', JSON.stringify(overrides || {}));
+}
+function recipeKey(name, temp = '') {
+  return normalizeRecipeName(name) + '|' + String(temp || '').toUpperCase();
+}
+function normalizeRecipeName(value) {
+  return String(value || '')
+    .replace(/\[[^\]]+\]/g, '')
+    .replace(/\([^)]*\)/g, '')
+    .replace(/ICE|HOT|ONLY|32oz|24oz|20oz|1\.1L/ig, '')
+    .replace(/[\s_\-·/]/g, '')
+    .trim()
+    .toLowerCase();
+}
+function recipeArg(value) {
+  return encodeURIComponent(String(value || ''));
+}
+function mergedRecipeRows() {
+  const rows = [...WOOJI_RECIPE_ROWS];
+  const overrides = getRecipeOverrides();
+  Object.keys(overrides).forEach((key) => {
+    const row = overrides[key];
+    const idx = rows.findIndex(r => recipeKey(r.name || r.stdName, r.temp) === key);
+    if(idx >= 0) rows[idx] = row;
+    else rows.push(row);
+  });
+  return rows;
+}
+function getRecipeCupSize(row) {
+  return row.size || row.cupSize || row.cup || '';
+}
+function getSizeBadge(row) {
+  const size = String(getRecipeCupSize(row) || '').trim().toLowerCase();
+  const temp = String(row.temp || '').trim().toUpperCase();
+  const note = String(row.note || '').trim().toUpperCase();
+  if(note.includes('ONLY ICE') || note.includes('ICE ONLY') || size.includes('only ice') || size.includes('ice only')) {
+    return { text: 'ICE ONLY', bg: '#e6eeff', color: '#0d47a1' };
+  }
+  if(temp === 'HOT') {
+    return { text: 'HOT (종이컵)', bg: '#fff0e6', color: '#c0392b' };
+  }
+  if(size.includes('10oz')) {
+    return { text: 'ICE (10oz)', bg: '#fff4e6', color: '#c45000' };
+  }
+  if(size.includes('32oz') || size.includes('1.1l')) {
+    return { text: 'ICE (32oz/1.1L)', bg: '#eaf3de', color: '#1a7a40' };
+  }
+  if(size.includes('24oz')) {
+    return { text: 'ICE (24oz)', bg: '#e6f0ff', color: '#1a5fc4' };
+  }
+  return { text: 'ICE (20oz)', bg: '#e6f0ff', color: '#1a5fc4' };
+}
+function getRecipeSizeLabel(row) {
+  return getSizeBadge(row).text;
+}
+function getRecipeSizeColor(row) {
+  return getSizeBadge(row).color;
+}
+function renderSizeBadge(badge) {
+  const label = esc(badge.text).replace(/ \(/g, '<br>(');
+  return '<span class="size-badge" style="background:' + badge.bg + '; color:' + badge.color + ';">' + label + '</span>';
+}
+function detailOptionsForRecipe(rawDetails, currentDetail) {
+  const opts = [];
+  let capture = false;
+  for(const d of rawDetails || []) {
+    if(d === currentDetail) { capture = true; continue; }
+    const name = d.itemName || '';
+    const isOpt = d.subMenuYn === 'Y' || d.submenuYn === 'Y' || name.startsWith('┗') || name.startsWith('- ') || name.startsWith('+ ');
+    if(capture && !isOpt) break;
+    if(capture && isOpt) opts.push(cleanOptionName(name));
+  }
+  const tag = currentDetail?.orderTag || '';
+  if(tag) opts.unshift(tag);
+  return opts.filter(Boolean);
+}
+function findRecipes(name, options = []) {
+  const norm = normalizeRecipeName(cleanMenuName(name));
+  const optText = (options || []).join(' ').toUpperCase();
+  const wantedTemp = optText.includes('HOT') ? 'HOT' : optText.includes('ICE') ? 'ICE' : '';
+  const allRows = mergedRecipeRows();
+  const exactRows = allRows.filter(r => {
+    const recipeName = normalizeRecipeName(r.name || r.stdName);
+    return recipeName && norm && recipeName === norm;
+  });
+  let rows = exactRows.length ? exactRows : allRows.filter(r => {
+    const recipeName = normalizeRecipeName(r.name || r.stdName);
+    return recipeName && norm && (recipeName.includes(norm) || norm.includes(recipeName));
+  });
+  if(wantedTemp) {
+    const tempRows = rows.filter(r => String(r.temp || '').toUpperCase() === wantedTemp);
+    if(tempRows.length) rows = tempRows;
+  }
+  return rows;
+}
+function cleanDuldalgeText(text) {
+  return String(text || '')
+    .replace(/^\s*[★*]\s*/g, '')
+    .replace(/^\s*덜\s*달게\s*[:：]?\s*/i, '')
+    .replace(/^\s*덜달게\s*[:：]?\s*/i, '')
+    .replace(/^\s*게\s*[:：]?\s*/i, '')
+    .replace(/^\s*[★*]\s*/g, '')
+    .trim();
+}
+function renderRecipeLine(line) {
+  let html = esc(line);
+  html = html.replace(/\(([^)]+)\)/g, '(<span style="color:#1a5fc4">$1</span>)');
+  html = html.replace(/(⚠️?[^\n<]*)/g, '<span style="color:#c0392b">$1</span>');
+  return html;
+}
+function renderSimpleRecipeCard(row) {
+  const lines = Array.isArray(row.lines) ? row.lines : String(row.lines || '').split('\n').filter(Boolean);
+  const lineHtml = lines.map((line, idx) => (
+    '<div class="recipe-line"><span class="recipe-line-num">' + (idx + 1) + '.</span>' + renderRecipeLine(line) + '</div>'
+  )).join('');
+  const sizeBadge = getSizeBadge(row);
+  const duldalgeText = cleanDuldalgeText(row.duldalge);
+  const duldalge = duldalgeText ? '<div class="recipe-duldalge">★ 덜달게: ' + renderRecipeLine(duldalgeText) + '</div>' : '';
+  const caution = row.caution ? '<div class="recipe-caution">' + renderRecipeLine(row.caution) + '</div>' : '';
+  const note = row.note ? '<div class="recipe-note">' + renderRecipeLine(row.note) + '</div>' : '';
+  return '<div class="recipe-card">' +
+    '<div class="recipe-name-cell">' + esc(row.name || row.stdName || '') + '<span class="recipe-temp">' + esc(row.temp || '') + '</span></div>' +
+    '<div class="recipe-size-cell">' + renderSizeBadge(sizeBadge) + '</div>' +
+    '<div class="recipe-main-cell">' + lineHtml + duldalge + caution + note +
+      '<div class="recipe-actions"><button class="recipe-action secondary" type="button" onclick="openRecipeEditor()">수정</button></div>' +
+    '</div>' +
+  '</div>';
+}
+function setRecipeBackState(state) {
+  recipeBackState = state;
+  const btn = document.getElementById('recipeCloseBtn');
+  if(btn) btn.textContent = recipeBackState ? '뒤로' : '닫기';
+}
+async function openRecipeLibrary(category = '전체', keyword = '') {
+  await loadRecipes();
+  const overlay = document.getElementById('recipeOverlay');
+  const title = document.getElementById('recipeTitle');
+  const body = document.getElementById('recipeBody');
+  const rows = mergedRecipeRows();
+  const categories = ['전체', ...Array.from(new Set(rows.map(r => r.category || '기타').filter(Boolean)))];
+  const selected = categories.includes(category) ? category : '전체';
+  const q = String(keyword || '').trim();
+  const normQ = normalizeRecipeName(q);
+  const filtered = rows.filter(r => {
+    const catOk = selected === '전체' || (r.category || '기타') === selected;
+    if(!catOk) return false;
+    if(!normQ) return true;
+    return [r.name, r.stdName, r.category].some(v => normalizeRecipeName(v).includes(normQ));
+  }).slice(0, 100);
+  title.textContent = '레시피';
+  setRecipeBackState(null);
+  body.innerHTML =
+    '<div class="recipe-library-tools">' +
+      '<input class="recipe-library-search" id="recipeLibrarySearch" value="' + esc(q) + '" placeholder="제품명 검색">' +
+      '<div class="recipe-category-row">' +
+        categories.map(cat => '<button class="recipe-category-btn ' + (cat === selected ? 'active' : '') + '" type="button" onclick="openRecipeLibrary(decodeURIComponent(\'' + recipeArg(cat) + '\'), document.getElementById(\'recipeLibrarySearch\')?.value || \'\')">' + esc(cat) + '</button>').join('') +
+      '</div>' +
+    '</div>' +
+    '<div class="recipe-library-list">' +
+      (filtered.map(r => '<button class="recipe-library-item" type="button" onclick="openRecipe(decodeURIComponent(\'' + recipeArg(r.name || r.stdName || '') + '\'), [decodeURIComponent(\'' + recipeArg(r.temp || '') + '\')], {fromLibrary:true, category:decodeURIComponent(\'' + recipeArg(selected) + '\'), keyword:document.getElementById(\'recipeLibrarySearch\')?.value || \'\'})">' +
+        '<span class="recipe-library-name">' + esc(r.name || r.stdName || '') + '</span>' +
+        '<span class="recipe-library-meta">' + esc(r.category || '기타') + '</span>' +
+        renderSizeBadge(getSizeBadge(r)) +
+      '</button>').join('') || '<div class="recipe-empty">검색 결과가 없습니다.</div>') +
+    '</div>';
+  overlay.classList.add('show');
+  const search = document.getElementById('recipeLibrarySearch');
+  if(search) search.oninput = () => openRecipeLibrary(selected, search.value);
+}
+async function openRecipe(name, options, context = null) {
+  await loadRecipes();
+  const overlay = document.getElementById('recipeOverlay');
+  const title = document.getElementById('recipeTitle');
+  const body = document.getElementById('recipeBody');
+  const recipes = findRecipes(name, options);
+  currentRecipeName = cleanMenuName(name || '');
+  currentRecipeOptions = options || [];
+  currentRecipeList = recipes;
+  setRecipeBackState(context && context.fromLibrary ? { category: context.category || '전체', keyword: context.keyword || '' } : null);
+  title.textContent = currentRecipeName || '레시피';
+  const optionText = currentRecipeOptions.length ? currentRecipeOptions.join('\n') : '옵션 없음';
+  const recipeHtml = recipes.length
+    ? '<div class="recipe-meta"><div class="recipe-meta-cell">상품명</div><div class="recipe-meta-cell">컵사이즈</div><div class="recipe-meta-cell">레시피</div></div>' + recipes.map(renderSimpleRecipeCard).join('')
+    : '<div class="recipe-card"><div class="recipe-name-cell">' + esc(currentRecipeName) + '</div><div class="recipe-size-cell"></div><div class="recipe-main-cell recipe-empty">등록된 레시피 없음<div class="recipe-actions"><button class="recipe-action" type="button" onclick="openRecipeEditor()">새 레시피 추가</button></div></div></div>';
+  body.innerHTML = '<div class="recipe-option-box">주문 옵션: ' + esc(optionText) + '</div>' + recipeHtml;
+  overlay.classList.add('show');
+}
+function hideRecipe() {
+  setRecipeBackState(null);
+  document.getElementById('recipeOverlay').classList.remove('show');
+}
+function goBackOrHideRecipe() {
+  if(recipeBackState) {
+    const state = recipeBackState;
+    openRecipeLibrary(state.category, state.keyword);
+    return;
+  }
+  hideRecipe();
+}
+function closeRecipe(e) {
+  if(e.target === document.getElementById('recipeOverlay')) hideRecipe();
+}
+function openRecipeEditor() {
+  const body = document.getElementById('recipeBody');
+  const base = currentRecipeList[0] || { name: currentRecipeName, temp: '', size: '', lines: [], duldalge: '', caution: '', note: '' };
+  body.innerHTML += '<div class="recipe-edit-form">' +
+    '<div class="recipe-form-grid">' +
+      '<div class="recipe-form-row"><label>상품명</label><input id="recipeEditName" value="' + esc(base.name || currentRecipeName) + '"></div>' +
+      '<div class="recipe-form-row"><label>온도</label><input id="recipeEditTemp" value="' + esc(base.temp || '') + '"></div>' +
+      '<div class="recipe-form-row"><label>사이즈</label><input id="recipeEditSize" value="' + esc(getRecipeCupSize(base)) + '"></div>' +
+    '</div>' +
+    '<div class="recipe-form-row"><label>레시피</label><textarea id="recipeEditLines">' + esc((base.lines || []).join('\n')) + '</textarea></div>' +
+    '<div class="recipe-form-row"><label>덜달게</label><input id="recipeEditDuldalge" value="' + esc(base.duldalge || '') + '"></div>' +
+    '<div class="recipe-form-row"><label>주의사항</label><input id="recipeEditCaution" value="' + esc(base.caution || '') + '"></div>' +
+    '<div class="recipe-actions"><button class="recipe-action" type="button" onclick="saveRecipeEditor()">저장</button><button class="recipe-action secondary" type="button" onclick="deleteRecipeOverride()">로컬 수정 삭제</button></div>' +
+  '</div>';
+}
+function saveRecipeEditor() {
+  const name = document.getElementById('recipeEditName').value.trim();
+  const temp = document.getElementById('recipeEditTemp').value.trim().toUpperCase();
+  const size = document.getElementById('recipeEditSize').value.trim();
+  const lines = document.getElementById('recipeEditLines').value.split('\n').map(v => v.trim()).filter(Boolean);
+  if(!name || !lines.length) {
+    alert('상품명과 레시피를 입력해 주세요.');
+    return;
+  }
+  const overrides = getRecipeOverrides();
+  overrides[recipeKey(name, temp)] = {
+    id: 'LOCAL-' + recipeKey(name, temp),
+    category: '로컬 수정',
+    name,
+    temp,
+    size,
+    lines,
+    duldalge: document.getElementById('recipeEditDuldalge').value.trim(),
+    caution: document.getElementById('recipeEditCaution').value.trim(),
+    note: '',
+    source: 'local'
+  };
+  saveRecipeOverrides(overrides);
+  openRecipe(name, temp ? [temp] : currentRecipeOptions);
+}
+function deleteRecipeOverride() {
+  const key = recipeKey(currentRecipeName, currentRecipeOptions.find(v => /HOT|ICE/i.test(v)) || '');
+  const overrides = getRecipeOverrides();
+  Object.keys(overrides).forEach(k => { if(k.startsWith(normalizeRecipeName(currentRecipeName) + '|')) delete overrides[k]; });
+  delete overrides[key];
+  saveRecipeOverrides(overrides);
+  openRecipe(currentRecipeName, currentRecipeOptions);
+}
+
+// ── 알림음 ──
+function getAudioCtx() {
+  if(!audioCtx) audioCtx = new(window.AudioContext||window.webkitAudioContext)();
+  return audioCtx;
+}
+function playAlert() {
+  try {
+    const ctx = getAudioCtx();
+    [{freq:1046,start:0,dur:0.2},{freq:784,start:0.25,dur:0.2},{freq:1046,start:0.5,dur:0.35}].forEach(n => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(n.freq, ctx.currentTime+n.start);
+      gain.gain.setValueAtTime(0, ctx.currentTime+n.start);
+      gain.gain.linearRampToValueAtTime(0.4, ctx.currentTime+n.start+0.01);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime+n.start+n.dur);
+      osc.start(ctx.currentTime+n.start);
+      osc.stop(ctx.currentTime+n.start+n.dur+0.05);
+    });
+  } catch(e) {}
+}
+document.addEventListener('click', () => {
+  if(!audioCtx) getAudioCtx();
+  else if(audioCtx.state==='suspended') audioCtx.resume();
+});
+
+// ── 시계 ──
+function updateTime() {
+  const now = new Date();
+  document.getElementById('topTime').textContent = pad(now.getHours()) + ':' + pad(now.getMinutes());
+}
+setInterval(updateTime, 1000);
+updateTime();
+ensureViewModeButton();
+applyMenuNameSize();
+loadRecipes();
+
+// ── 경과시간 갱신 ──
+setInterval(() => {
+  if(showDone) return;
+  activeOrders.forEach(order => {
+    const el = document.getElementById('elapsed_' + order._seq);
+    if(!el) return;
+    const urg = isUrgent(order.createdAt);
+    el.textContent = getElapsed(order.createdAt);
+    el.className = 'elapsed' + (urg ? ' warn' : '');
+  });
+}, 1000);
+
+// ── 폴링 시작 ──
+function restartPolling() {
+  if(pollTimer) clearInterval(pollTimer);
+  poll();
+  pollTimer = setInterval(poll, config.pollInterval * 1000);
+}
+
+restartPolling();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,2990 @@
+{
+    "version":  1,
+    "updatedAt":  "2026-07-05",
+    "recipes":  [
+                    {
+                        "id":  "WOOJI-AME-001",
+                        "category":  "아메리카노",
+                        "name":  "아메리터",
+                        "temp":  "ICE",
+                        "size":  "32oz/1.1L",
+                        "lines":  [
+                                      "32oz: 32oz 아이스컵 + 얼음 수북히 + 물 컵윗선(350ml) + 3shot",
+                                      "1.1L: 1.1L 보틀 + 물 350ml + 얼음 수북히 + 3shot"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-003",
+                        "category":  "아메리카노",
+                        "name":  "아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 온수 8부(375ml) + 2shot"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-004",
+                        "category":  "아메리카노",
+                        "name":  "아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 수북히 + 물 컵윗선(225ml) + 2shot"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-005",
+                        "category":  "아메리카노",
+                        "name":  "헤이즐넛 아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 해당시럽 3p(38g) + 온수 8부(375ml) + 2shot"
+                                  ],
+                        "duldalge":  "게: 해당시럽 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-006",
+                        "category":  "아메리카노",
+                        "name":  "헤이즐넛 아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 평평 + 물 컵윗선(225ml) + 계량컵 해당시럽 4p(51g) + 2shot"
+                                  ],
+                        "duldalge":  "게: 해당시럽 2p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-007",
+                        "category":  "아메리카노",
+                        "name":  "피칸 아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 해당시럽 3p(29g) + 온수 8부(375ml) + 2shot"
+                                  ],
+                        "duldalge":  "게: 해당시럽 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-008",
+                        "category":  "아메리카노",
+                        "name":  "피칸 아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 평평 + 물 컵윗선(225ml) + 계량컵 해당시럽 4p(39g) + 2shot"
+                                  ],
+                        "duldalge":  "게: 해당시럽 2p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-009",
+                        "category":  "아메리카노",
+                        "name":  "제로 헤이즐넛 아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 제로헤이즐넛시럽 3p + 온수 8부(375ml) + 2shot"
+                                  ],
+                        "duldalge":  "게: 해당시럽 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-010",
+                        "category":  "아메리카노",
+                        "name":  "제로 헤이즐넛 아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 평평 + 물 컵윗선(225ml) + 계량컵 제로헤이즐넛시럽 4p + 2shot"
+                                  ],
+                        "duldalge":  "게: 해당시럽 2p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-011",
+                        "category":  "아메리카노",
+                        "name":  "꿀아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 꿀 2래들(50g) + 온수 8부(375ml) + 2shot"
+                                  ],
+                        "duldalge":  "게: 꿀 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-012",
+                        "category":  "아메리카노",
+                        "name":  "꿀아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 평평 + 물 컵윗선(225ml) + 계량컵 꿀 2래들(50g) + 2shot = 섞어줌"
+                                  ],
+                        "duldalge":  "게: 꿀 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-013",
+                        "category":  "아메리카노",
+                        "name":  "레모니카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 레몬슬라이스 2ea + 레몬퓨레 1p(35g) + 꿀 1t = 눌러줌 + 물 200ml + 얼음 평평 + 리스트레또 2shot"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "⚠️ 꿀 1t만 제거",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-014",
+                        "category":  "아메리카노",
+                        "name":  "우지믹스커피 (24oz)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 레시피션A(우지믹스커피베이스 150ml(165g)) + 얼음 수북히 + 물 가득(150ml) + 섞어줌"
+                                  ],
+                        "duldalge":  "게: 우지믹스B 125ml + 물 200ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-AME-015",
+                        "category":  "아메리카노",
+                        "name":  "우지믹스커피 (32oz)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "32oz 아이스컵 + 우지믹스커피베이스 250ml(290g) + 물 250ml = 섞어줌 + 얼음 평평"
+                                  ],
+                        "duldalge":  "게: 우지믹스B 225ml + 물 275ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-001",
+                        "category":  "콜드브루",
+                        "name":  "콜드브루커피",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 콜드브루원액 4래들(75ml/70g) + 온수 8부(375ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-002",
+                        "category":  "콜드브루",
+                        "name":  "콜드브루커피",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 물 O윗선(200ml) + 콜드브루원액 4래들(75ml/70g)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-003",
+                        "category":  "콜드브루",
+                        "name":  "콜드브루라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 콜드브루원액 4래들(75ml) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-004",
+                        "category":  "콜드브루",
+                        "name":  "콜드브루라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 우유 O윗선(200ml) + 콜드브루원액 4래들(75ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-005",
+                        "category":  "콜드브루",
+                        "name":  "바닐라크림 콜드브루",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 콜드브루원액 컵아랫선(75ml) + 바닐라시럽 3p + 컵 롤링 + 얼음 수북히 + (큰 계량컵: 우유 150ml + 달럽크림 3래들) = 크림 덩어리 없이 충분히 섞어주기"
+                                  ],
+                        "duldalge":  "게: 바닐라시럽 1.5p + 달럽 그대로 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-006",
+                        "category":  "콜드브루",
+                        "name":  "라이트 바닐라크림 콜드브루",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 콜드브루원액 컵아랫선(75ml) + 제로바닐라시럽 3p + 컵롤링(섞어주기) + 얼음 수북히 + (계량컵: 우유 150ml + 달럽 3래들) = 크림 덩어리 없이 충분히 섞어주기"
+                                  ],
+                        "duldalge":  "게: 해당시럽 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-007",
+                        "category":  "콜드브루",
+                        "name":  "리얼말차 콜드브루",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 녹차베이스 컵아랫선(75ml) + 얼음 수북히 + 우유 컵윗선(175ml) + 콜드브루원액 4래들(75ml)"
+                                  ],
+                        "duldalge":  "게: 녹차베이스 50ml + 우유 200ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-008",
+                        "category":  "콜드브루",
+                        "name":  "올무크림 콜드브루",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 콜드브루원액 컵아랫선(75ml) + 물 150ml + 슈가시럽 3p + 얼음 컵윗선 + 올무크림 가득(80g)"
+                                  ],
+                        "duldalge":  "게: 슈가시럽 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-CB-009",
+                        "category":  "콜드브루",
+                        "name":  "연유 크리미슈퍼너",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (콜드브루원액 컵아랫선(75ml) + 연유 2래들 + 우유 150ml = 섞어줌) + 얼음 컵윗선 + 바닐라크림 70g + 분쇄원두 소량 톡톡"
+                                  ],
+                        "duldalge":  "게: 연유 1래들만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-001",
+                        "category":  "라떼",
+                        "name":  "딥카페라떼 (속성우유)",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 2shot + 스팀 딥베이스(스팀전 250ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "⚠️ 딥베이스 믹싱피처 10회 혼합 후 제조",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-002",
+                        "category":  "라떼",
+                        "name":  "딥카페라떼 (속성우유)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 딥베이스 O윗선(200ml) + 2shot"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-003",
+                        "category":  "라떼",
+                        "name":  "딥카페라떼 (속성우유)",
+                        "temp":  "ICE",
+                        "size":  "32oz",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + 얼음 평평 + 딥베이스 375ml/g + 3shot"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-004",
+                        "category":  "라떼",
+                        "name":  "카페라떼 (일반우유)",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 2shot + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-005",
+                        "category":  "라떼",
+                        "name":  "카페라떼 (일반우유)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 우유 O윗선(200ml) + 2shot"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-006",
+                        "category":  "라떼",
+                        "name":  "카페라떼 (일반우유)",
+                        "temp":  "ICE",
+                        "size":  "32oz",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + 얼음 평평 + 우유 350ml/g + 3shot"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-007",
+                        "category":  "라떼",
+                        "name":  "카푸치노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 2shot + 스팀우유(스팀전 225ml) + 시나몬 기울여 3톡 + 일반 라떼보다 거품 풍성하게 스팀"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-008",
+                        "category":  "라떼",
+                        "name":  "카푸치노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유폼(냉장우유 175ml= 펌핑 10~12회) + 2shot + 시나몬 기울여 3톡"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-009",
+                        "category":  "라떼",
+                        "name":  "시나몬슈가 카푸치노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 2shot + 슈가시럽 2p + 시나몬 기울여 3톡 + 스팀전 225ml + (시나몬+황설탕=모두 윗면전체)"
+                                  ],
+                        "duldalge":  "게: 슈가시럽 1p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-010",
+                        "category":  "라떼",
+                        "name":  "시나몬슈가 카푸치노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유폼(냉장우유 175ml= 펌핑 10~12회) + (계량컵: 슈가시럽 2p + 시나몬 기울여 3톡 + 2shot) + (시나몬+황설탕=모두 윗면전체)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-011",
+                        "category":  "라떼",
+                        "name":  "바닐라라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 바닐라시럽 2p + 바닐라파우더 1래들 + 2shot + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "게: 바닐라시럽 1p + 파우더 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-012",
+                        "category":  "라떼",
+                        "name":  "바닐라라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 바닐라시럽 2p + 바닐라파우더 1래들 + 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "게: 바닐라시럽 1p + 파우더 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-013",
+                        "category":  "라떼",
+                        "name":  "바닐라라떼",
+                        "temp":  "ICE",
+                        "size":  "32oz",
+                        "lines":  [
+                                      "32oz",
+                                      "1.1L 보틀 + 얼음 평평 + 우유 350ml/g + (계량컵: 바닐라시럽 4p + 바닐라파우더 1래들 + 1t + 3shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "게: 바닐라시럽 2p + 파우더 1래들 + 1t 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-014",
+                        "category":  "라떼",
+                        "name":  "라이트 바닐라라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 제로바닐라시럽 3p + 2shot + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "게: 시럽 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-015",
+                        "category":  "라떼",
+                        "name":  "라이트 바닐라라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 제로바닐라시럽 4p + 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "게: 해당시럽 2p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-016",
+                        "category":  "라떼",
+                        "name":  "헤이즐넛/피칸라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 해당시럽 3p + 2shot + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "게: 해당시럽 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-017",
+                        "category":  "라떼",
+                        "name":  "헤이즐넛/피칸라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 해당시럽 4p + 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "게: 해당시럽 2p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-018",
+                        "category":  "라떼",
+                        "name":  "꿀카페라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 꿀 2래들 + 2shot + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "게: 꿀 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-019",
+                        "category":  "라떼",
+                        "name":  "꿀카페라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 꿀 2래들 + 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "게: 꿀 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-020",
+                        "category":  "라떼",
+                        "name":  "카라멜 마끼아또",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 바닐라시럽 2p + 카라멜소스 1p + 스팀우유(스팀전 225ml) + 2shot + 카라멜드리즐 지그재그"
+                                  ],
+                        "duldalge":  "게: 바닐라시럽 1p + 카라멜소스 0.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-021",
+                        "category":  "라떼",
+                        "name":  "카라멜 마끼아또",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 바닐라시럽 2p + 카라멜소스 1p + 2shot = 섞어줌) + 카라멜드리즐 컵백 2바퀴"
+                                  ],
+                        "duldalge":  "게: 바닐라시럽 1p + 카라멜소스 0.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-022",
+                        "category":  "라떼",
+                        "name":  "고구마 카페라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 고구마퓨레 80g + 슈가시럽 2p + 스팀우유(스팀전 225ml) + 2shot (⚠️ 최대한 뜨겁게) / 덜달게: 슈가시럽 2p만 제거"
+                                  ],
+                        "duldalge":  "게: 슈가시럽 2p만 제거",
+                        "caution":  "20oz 종이컵 + 고구마퓨레 80g + 슈가시럽 2p + 스팀우유(스팀전 225ml) + 2shot (⚠️ 최대한 뜨겁게)",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-023",
+                        "category":  "라떼",
+                        "name":  "고구마 카페라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 컵윗선 + (블렌더: 우유 225ml + 슈가시럽 2p + 고구마퓨레 80g) + 2shot"
+                                  ],
+                        "duldalge":  "게: 슈가시럽 2p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-024",
+                        "category":  "라떼",
+                        "name":  "연유라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 연유 2래들 + 슈가시럽 1p + 2shot + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "게: 연유 1래들만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-025",
+                        "category":  "라떼",
+                        "name":  "연유라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 연유 2래들 + 슈가시럽 1p + 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "게: 연유 1래들만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-026",
+                        "category":  "라떼",
+                        "name":  "아이스크림 라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 컵윗선 + 아이스크림 3바퀴 + (계량컵: 우유 150ml + 2shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-MOCHA-001",
+                        "category":  "카페모카",
+                        "name":  "카페모카",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 초코파우더 2래들 + 2shot + 스팀우유(스팀전 200ml) + 휘핑 + 초코드리즐"
+                                  ],
+                        "duldalge":  "게: 초코파우더 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-MOCHA-002",
+                        "category":  "카페모카",
+                        "name":  "카페모카",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 초코베이스 컵아랫선(75ml) + 얼음 평평 + 우유 OO아랫선(125ml) + 2shot = 섞어줌 + 휘핑 + 초코드리즐"
+                                  ],
+                        "duldalge":  "게: 초코베이스 50ml + 우유 150ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-MOCHA-003",
+                        "category":  "카페모카",
+                        "name":  "헤이즐넛 카페모카",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 초코파우더 1래들 + 헤이즐넛시럽 2p + 2shot + 스팀우유(스팀전 200ml) + 휘핑 + 초코드리즐 + 아몬드슬라이스 0.5래들"
+                                  ],
+                        "duldalge":  "게: 초코파우더 1래들 + 헤이즐넛시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-MOCHA-004",
+                        "category":  "카페모카",
+                        "name":  "헤이즐넛 카페모카",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 헤이즐넛시럽 2p + 초코베이스 컵아랫선(55ml) + 얼음 평평 + 우유 OO아랫선(125ml) + 2shot = 섞어줌 + 휘핑 + 초코드리즐 + 아몬드슬라이스 0.5래들"
+                                  ],
+                        "duldalge":  "게: 헤이즐넛시럽 1p + 초코베이스 50ml + 우유 150ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-MOCHA-005",
+                        "category":  "카페모카",
+                        "name":  "화이트초코 카페모카",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 화이트초코소스 1.5p + 2shot + 스팀우유(스팀전 200ml) + 휘핑 + 화이트초코드리즐"
+                                  ],
+                        "duldalge":  "게: 화이트초코소스 1p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-MOCHA-006",
+                        "category":  "카페모카",
+                        "name":  "화이트초코 카페모카",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 화이트초코소스 1.5p + 얼음 평평 + 우유 OO아랫선(125ml) + 2shot = 섞어줌 + 휘핑 + 화이트초코드리즐"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-MOCHA-007",
+                        "category":  "카페모카",
+                        "name":  "민트카페모카",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 민트시럽 1p + 민트초코파우더 2래들 + 2shot + 스팀우유(스팀전 200ml) + 초코휘핑 + 쿠키분태"
+                                  ],
+                        "duldalge":  "게: 민트초코파우더 1래들 + 민트시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-MOCHA-008",
+                        "category":  "카페모카",
+                        "name":  "민트카페모카",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 민트시럽 1p + (계량컵: 온수 25ml + 민트초코파우더 2래들 = 섞어줌 + 우유 150ml) + 얼음 평평 + 2shot + 초코휘핑 + 쿠키분태"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ADE-001",
+                        "category":  "에이드",
+                        "name":  "레몬에이드",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (레몬퓨레 1.5p + 슈가시럽 1p + 얼음 평평 + 사이다 250ml = 섞어줌) + 레몬슬라이스 1ea + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "게: 레몬퓨레 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ADE-002",
+                        "category":  "에이드",
+                        "name":  "청포도에이드",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (청포도퓨레 2p + 라임시럽 1p + 얼음 평평 + 사이다 250ml = 섞어줌) + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "게: 청포도퓨레 1p + 라임시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ADE-003",
+                        "category":  "에이드",
+                        "name":  "자몽에이드",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (자몽퓨레 1p + 자몽시럽 1p + 슈가시럽 1p + 자몽슬라이스 1ea = 눌러줌 + 얼음 평평 + 사이다 250ml = 섞어줌) + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "게: 자몽퓨레 1p + 자몽시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ADE-004",
+                        "category":  "에이드",
+                        "name":  "라임모히또",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (라임시럽 3p + 모히또시럽 4p + 슈가시럽 1p + 라임슬라이스 4ea = 눌러줌 + 얼음 평평 + 사이다 250ml = 섞어줌) + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "게: 라임시럽 3p + 모히또시럽 3p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ADE-005",
+                        "category":  "에이드",
+                        "name":  "체리콕",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 체리베이스 120g(계량컵 100ml) + 얼음 평평 + 콜라 가득(1캔) + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "게: 체리베이스 75ml만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SMO-001",
+                        "category":  "스무디",
+                        "name":  "플레인 요거트스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 우유 200ml + 요거트파우더 5래들 + 슈가시럽 1p + 얼음 수북히)"
+                                  ],
+                        "duldalge":  "게: 슈가시럽 1p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SMO-002",
+                        "category":  "스무디",
+                        "name":  "딸기 요거트스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 우유 150ml + 요거트파우더 4래들 + 딸기퓨레 1.5p + 얼음 수북히)"
+                                  ],
+                        "duldalge":  "게: 요거트파우더 3래들 + 딸기퓨레 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SMO-003",
+                        "category":  "스무디",
+                        "name":  "망고 요거트스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 우유 150ml + 요거트파우더 4래들 + 망고퓨레 1.5p + 얼음 수북히)"
+                                  ],
+                        "duldalge":  "게: 요거트파우더 3래들 + 망고퓨레 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SMO-004",
+                        "category":  "스무디",
+                        "name":  "블루베리 요거트스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 우유 150ml + 요거트파우더 4래들 + 블루베리리플젬 2래들 + 얼음 수북히)"
+                                  ],
+                        "duldalge":  "게: 요거트파우더 3래들 + 블루베리 2래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SMO-005",
+                        "category":  "스무디",
+                        "name":  "스크류 딸기스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 딸기베이스 컵아랫선(75g) + 컵 롤링 + [블렌더: 물 100ml + 사과청 3래들 + 슈가시럽 3p + 얼음 평평 + 8알] + 딸기베이스 1래들 + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "게: 딸기베이스 50g + 슈가시럽 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SMO-006",
+                        "category":  "스무디",
+                        "name":  "홍시스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 물 175ml + 슈가시럽 8p + 냉동홍시 200g + 얼음 컵윗선) + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "게: 슈가시럽 4p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-001",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 아메리터",
+                        "temp":  "ICE",
+                        "size":  "32oz/1.1L",
+                        "lines":  [
+                                      "32oz: 32oz 아이스컵 + 얼음 수북히 + 물 컵윗선(350ml) + (디카페인 4shot)",
+                                      "1.1L: 1.1L 보틀 + 물 350ml + 얼음 수북히 + (디카페인 4shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-003",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 온수 8부(375ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-004",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 수북히 + 물 컵윗선(225ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-005",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 헤이즐넛 아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 해당시럽 3p + 온수 8부(375ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-006",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 헤이즐넛 아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 평평 + 물 컵윗선(225ml) + (계량컵: 해당시럽 4p + 디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 2p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-007",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 피칸 아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 해당시럽 3p + 온수 8부(375ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-008",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 피칸 아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 평평 + 물 컵윗선(225ml) + (계량컵: 해당시럽 4p + 디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 2p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-009",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 제로 헤이즐넛 아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 제로헤이즐넛시럽 3p + 온수 8부(375ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-010",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 제로 헤이즐넛 아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 평평 + 물 컵윗선(225ml) + (계량컵: 제로헤이즐넛시럽 4p + 디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 2p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-011",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 꿀아메리카노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 꿀 2래들 + 온수 8부(375ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 꿀 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-012",
+                        "category":  "디카페인 아메리카노",
+                        "name":  "디카페인 꿀아메리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 평평 + 물 컵윗선(225ml) + (계량컵: 꿀 2래들 + 디카페인 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 꿀 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-013",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 콜드브루커피",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (디카페인 콜드브루원액 4래들(75ml)) + 온수 8부(375ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-014",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 콜드브루커피",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 물 O윗선(200ml) + (디카페인 콜드브루원액 4래들(75ml))"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-015",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 콜드브루라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (디카페인 콜드브루원액 4래들(75ml)) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-016",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 콜드브루라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 우유 O윗선(200ml) + (디카페인 콜드브루원액 4래들(75ml))"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-017",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 바닐라크림 콜드브루",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (디카페인 콜드브루원액 컵아랫선(75ml)) + 바닐라시럽 3p + 컵롤링(섞어주기) + 얼음 수북히 + (큰 계량컵: 우유 150ml + 달럽크림 3래들 = 크림 덩어리 없이 충분히 섞어주기)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 바닐라시럽 1.5p + 달럽 용량 그대로 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-018",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 라이트 바닐라크림 콜드브루",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (디카페인 콜드브루원액 컵아랫선(75ml)) + 제로바닐라시럽 3p + 컵롤링(섞어주기) + 얼음 수북히 + (계량컵: 우유 150ml + 달럽 3래들 = 크림 덩어리 없이 충분히 섞어주기)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-019",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 리얼말차 콜드브루",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 녹차베이스 컵아랫선(75ml) + 얼음 수북히 + 우유 컵윗선(175ml) + (디카페인 콜드브루원액 4래들(75ml))"
+                                  ],
+                        "duldalge":  "★ 덜달게: 녹차베이스 50ml + 우유 200ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-020",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 올무크림 콜드브루",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (디카페인 콜드브루원액 컵아랫선(75ml)) + 물 150ml + 슈가시럽 3p + 얼음 컵윗선 + 올무크림 가득(80g)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-021",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 연유 크리미슈퍼너",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + ((디카페인 콜드브루원액 컵아랫선(75ml)) + 연유 2래들 + 우유 150ml = 섞어줌) + 얼음 컵윗선 + 바닐라크림 70g + 분쇄원두 소량 톡톡"
+                                  ],
+                        "duldalge":  "★ 덜달게: 연유 1래들만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-022",
+                        "category":  "디카페인 콜드브루",
+                        "name":  "디카페인 오렌지 크리미슈퍼너",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (오렌지주스 30g + 슈가시럽 2p = 컵롤링) + 얼음 10알 + 우유 30g + (디카페인 콜드브루원액 50g + 바닐라크림 30g + 오렌지슬라이스 반쪽 1ea + 분쇄원두 소량 톡톡)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-023",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 딥카페라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (디카페인 2shot) + 스팀 딥베이스(스팀전 250ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "⚠️ 딥베이스 믹싱피처 10회 혼합 후 제조",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-024",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 딥카페라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 딥베이스 O윗선(200ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-025",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 딥카페라떼",
+                        "temp":  "ICE",
+                        "size":  "32oz",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + 얼음 평평 + 딥베이스 375ml/g + (디카페인 4shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-026",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 카페라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (디카페인 2shot) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-027",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 카페라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 우유 O윗선(200ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-028",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 카페라떼",
+                        "temp":  "ICE",
+                        "size":  "32oz",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + 얼음 평평 + 우유 350ml/g + (디카페인 4shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-029",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 카푸치노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (디카페인 2shot) + 스팀우유(스팀전 225ml) + 시나몬 기울여 3톡"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "⚠️ 일반 라떼보다 거품 풍성하게 스팀",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-030",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 카푸치노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유폼(냉장우유 175ml = 펌핑 10~12회) + (디카페인 2shot) + 시나몬 기울여 3톡"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-031",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 시나몬슈가 카푸치노",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (디카페인 2shot) + 슈가시럽 2p + 시나몬 기울여 3톡 + 스팀전 225ml + (시나몬 + 황설탕 = 모두 윗면전체)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 제거",
+                        "caution":  "⚠️ 일반 라떼보다 거품 풍성하게 스팀",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-032",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 시나몬슈가 카푸치노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유폼(냉장우유 175ml = 펌핑 10~12회) + (계량컵: 슈가시럽 2p + 시나몬 기울여 3톡 + 디카페인 2shot) + (시나몬 + 황설탕 = 모두 윗면전체)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-033",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 바닐라라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 바닐라시럽 2p + 바닐라파우더 1래들 + (디카페인 2shot) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 바닐라시럽 1p + 파우더 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-034",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 바닐라라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 바닐라시럽 2p + 바닐라파우더 1래들 + 디카페인 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 바닐라시럽 1p + 파우더 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-035",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 바닐라라떼",
+                        "temp":  "ICE",
+                        "size":  "32oz",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + 얼음 평평 + 우유 350ml/g + (계량컵: 바닐라시럽 4p + 바닐라파우더 1래들 + 1t + 디카페인 4shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 바닐라시럽 2p + 파우더 1래들 + 1t 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-036",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 라이트 바닐라라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 제로바닐라시럽 3p + (디카페인 2shot) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 시럽 1.5p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-037",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 라이트 바닐라라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 제로바닐라시럽 4p + 디카페인 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 2p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-038",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 헤이즐넛/피칸라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 해당시럽 3p + (디카페인 2shot) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 1.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-039",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 헤이즐넛/피칸라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 해당시럽 4p + 디카페인 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당시럽 2p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-040",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 꿀카페라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 꿀 2래들 + (디카페인 2shot) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 꿀 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-041",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 꿀카페라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 꿀 2래들 + 디카페인 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 꿀 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-042",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 카라멜 마끼아또",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 바닐라시럽 2p + 카라멜소스 1p + 스팀우유(스팀전 225ml) + (디카페인 2shot) + 카라멜드리즐 지그재그"
+                                  ],
+                        "duldalge":  "★ 덜달게: 바닐라시럽 1p + 카라멜소스 0.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-043",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 카라멜 마끼아또",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 바닐라시럽 2p + 카라멜소스 1p + 디카페인 2shot = 섞어줌) + 카라멜드리즐 컵백 2바퀴"
+                                  ],
+                        "duldalge":  "★ 덜달게: 바닐라시럽 1p + 카라멜소스 0.5p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-044",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 고구마 카페라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 고구마퓨레 80g + 슈가시럽 2p + 스팀우유(스팀전 225ml) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 2p만 제거",
+                        "caution":  "⚠️ 최대한 뜨겁게",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-045",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 고구마 카페라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 컵윗선 + (블렌더: 우유 225ml + 슈가시럽 2p + 고구마퓨레 80g) + (디카페인 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 2p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-046",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 연유라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 연유 2래들 + 슈가시럽 1p + (디카페인 2shot) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 연유 1래들만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-047",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 연유라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + 우유 O아랫선(200ml) + (계량컵: 연유 2래들 + 슈가시럽 1p + 디카페인 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 연유 1래들만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-048",
+                        "category":  "디카페인 라떼",
+                        "name":  "디카페인 아이스크림 라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 컵윗선 + 아이스크림 3바퀴 + (계량컵: 우유 150ml + 디카페인 2shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-049",
+                        "category":  "디카페인 카페모카",
+                        "name":  "디카페인 카페모카",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 초코파우더 2래들 + (디카페인 2shot) + 스팀우유(스팀전 200ml) + 휘핑 + 초코드리즐"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코파우더 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-050",
+                        "category":  "디카페인 카페모카",
+                        "name":  "디카페인 카페모카",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 초코베이스 컵아랫선(75ml) + 얼음 평평 + 우유 OO아랫선(125ml) + (디카페인 2shot = 섞어줌) + 휘핑 + 초코드리즐"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코베이스 50ml + 우유 150ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-051",
+                        "category":  "디카페인 카페모카",
+                        "name":  "디카페인 헤이즐넛 카페모카",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 초코파우더 1래들 + 헤이즐넛시럽 2p + (디카페인 2shot) + 스팀우유(스팀전 200ml) + 휘핑 + 초코드리즐 + 아몬드슬라이스 0.5래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코파우더 1래들 + 헤이즐넛시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-052",
+                        "category":  "디카페인 카페모카",
+                        "name":  "디카페인 헤이즐넛 카페모카",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 헤이즐넛시럽 2p + 초코베이스 컵아랫선(55ml) + 얼음 평평 + 우유 OO아랫선(125ml) + (디카페인 2shot = 섞어줌) + 휘핑 + 초코드리즐 + 아몬드슬라이스 0.5래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 헤이즐넛시럽 1p + 초코베이스 50ml + 우유 150ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-053",
+                        "category":  "디카페인 카페모카",
+                        "name":  "디카페인 화이트초코 카페모카",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 화이트초코소스 1.5p + (디카페인 2shot) + 스팀우유(스팀전 200ml) + 휘핑 + 화이트초코드리즐"
+                                  ],
+                        "duldalge":  "★ 덜달게: 화이트초코소스 1p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-054",
+                        "category":  "디카페인 카페모카",
+                        "name":  "디카페인 화이트초코 카페모카",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 화이트초코소스 1.5p + 얼음 평평 + 우유 OO아랫선(125ml) + (디카페인 2shot = 섞어줌) + 휘핑 + 화이트초코드리즐"
+                                  ],
+                        "duldalge":  "★ 덜달게: 화이트초코소스 1p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-055",
+                        "category":  "디카페인 카페모카",
+                        "name":  "디카페인 민트카페모카",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 민트시럽 1p + 민트초코파우더 2래들 + (디카페인 2shot) + 스팀우유(스팀전 200ml) + 초코휘핑 + 쿠키분태"
+                                  ],
+                        "duldalge":  "★ 덜달게: 민트초코파우더 1래들 + 민트시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-DECAF-056",
+                        "category":  "디카페인 카페모카",
+                        "name":  "디카페인 민트카페모카",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 민트시럽 1p + (계량컵: 온수 25ml + 민트초코파우더 2래들 = 섞어줌 + 우유 150ml) + 얼음 평평 + (디카페인 2shot) + 초코휘핑 + 쿠키분태"
+                                  ],
+                        "duldalge":  "★ 덜달게: 민트초코파우더 1래들 + 민트시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-001",
+                        "category":  "시그니처플랫",
+                        "name":  "피넛크림라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 우유 120g + 우유큐브 2ea + 컵 롤링 + 피넛크림 50g (20cm 높이에서 떨어트림) + (리스트레또 2shot: 스파웃 음료면에 붙혀서 추출하며 컵을 돌려 샷이 벽면으로 흘러내리게 추출) + (바닐라파우더 0.3t) = 윗면 전체 골고루 토핑"
+                                  ],
+                        "duldalge":  "★ 덜달게: 우유 150g + 피넛크림 25g 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-002",
+                        "category":  "시그니처플랫",
+                        "name":  "커피오렌망",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (오렌지주스 120g + 슈가시럽 4p = 섞어줌) + 얼음 8알 + 컵 롤링 + 에스프레소베이스 60g + 오렌지슬라이스 반쪽 2ea + 민트잎 1ea (제공 시 종 분리 필수)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 2p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-003",
+                        "category":  "시그니처플랫",
+                        "name":  "오렌지 크리미슈퍼너",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (오렌지주스 30g + 슈가시럽 2p = 컵 롤링) + 얼음 10알 + 우유 30g + (콜드브루 50g + 바닐라크림 30g + 오렌지슬라이스 반쪽 1ea + 분쇄원두 소량 톡톡)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-004",
+                        "category":  "시그니처플랫",
+                        "name":  "디카페인 피넛크림라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 우유 120g + 우유큐브 2ea + 컵 롤링 + 피넛크림 50g (20cm 높이에서 떨어트림) + (디카페인 리스트레또 2shot: 스파웃 음료면에 붙혀서 추출하며 컵을 돌려 샷이 벽면으로 흘러내리게 추출) + (바닐라파우더 0.3t) = 윗면 전체 골고루 토핑"
+                                  ],
+                        "duldalge":  "★ 덜달게: 우유 150g + 피넛크림 25g 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-005",
+                        "category":  "시그니처메뉴",
+                        "name":  "송파라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 우지곡물베이스 40g + (2shot) + (스팀우유: 우유 175ml/g + 오트밀크 3래들)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-006",
+                        "category":  "시그니처메뉴",
+                        "name":  "송파라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 우유 150ml/g + 오트밀크 3래들 + (계량컵: 우지곡물베이스 40g + 2shot = 섞어줌)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-007",
+                        "category":  "시그니처메뉴",
+                        "name":  "서울플로트",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 얼음 7알 + 우유 50ml/g + (에스프레소 1shot) + 쌀젤라또 2스쿱 + 쌀튀밥 3래들 + 미니약과 1ea + 꿀 드리즐 5g"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "⚠️ 추가옵션 쌀젤라또 선택시 20oz 아이스컵에 음료 제조",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-008",
+                        "category":  "시그니처메뉴",
+                        "name":  "참깨그라니따",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (블렌더: 얼음 수북히 + 얼음 8알 + 에버휩 80g(75ml) + 황설탕 1래들 + 황설탕 1t + 아몬드슬라이스 1t) + (블렌더 뚜껑 열고 참깨파우더 1래들 = 섞어줌) + 냉장샷 25ml/g + 참깨파우더 1t"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-009",
+                        "category":  "시그니처메뉴",
+                        "name":  "깻페라떼 (10oz ICE)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (깻잎 3ea + 슈가시럽 2p + 우유 150ml/g = 10회 눌러줌) + 얼음 수북히 + (깻잎 1ea) + (리스트레또 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-010",
+                        "category":  "시그니처메뉴",
+                        "name":  "깻페라떼 (20oz HOT)",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (깻잎 4ea + 슈가시럽 3p = 15회 눌러줌) + 스팀우유(225ml/g) + (깻잎 1ea) + (2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-011",
+                        "category":  "시그니처메뉴",
+                        "name":  "깻페라떼 (20oz ICE)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (깻잎 4ea + 슈가시럽 3p + 우유 200ml/g = 15회 눌러줌) + 얼음 수북히 + (깻잎 1ea) + (2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-SIG-012",
+                        "category":  "시그니처메뉴",
+                        "name":  "깻잎스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 물 125ml/g + 설탕베이스 2래들(40g) + 사과청 2래들(60g) + 라임시럽 1p + 라임슬라이스 1ea + 깻잎 5ea + 얼음 수북히) + (깻잎 1ea) + 레몬슬라이스 1ea + 홍체리 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-027",
+                        "category":  "논커피 / 과일라떼",
+                        "name":  "리얼 블루베리라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블루베리리플젬 컵 아랫선(4래들)) + 우유 200ml + 바스푼으로 혼합 + 얼음 평평 + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 블루베리리플젬 3래들 + 우유 250ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-028",
+                        "category":  "논커피 / 과일라떼",
+                        "name":  "리얼딸기라떼 (20oz)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (딸기베이스 ETC 모아랫선(6래들/120g)) + 얼음 평평 + 우유 가득(200ml) + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 딸기베이스 100g + 우유 225ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-029",
+                        "category":  "논커피 / 과일라떼",
+                        "name":  "리얼딸기라떼 (32oz)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "32oz 아이스컵 + (딸기베이스 200g + 우유 300ml = 섞어줌) + 얼음 평평 + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 딸기베이스 180g + 우유 325ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-LAT-030",
+                        "category":  "논커피 / 과일라떼",
+                        "name":  "리얼딸기라떼 (1.1L)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "1.1L 보틀 + (딸기베이스 200g + 우유 300ml = 섞어줌) + 얼음 완성선까지"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-001",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "초코라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (온수 50ml + 초코파우더 4래들 = 섞어줌) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코파우더 2래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-002",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "초코라떼",
+                        "temp":  "ICE",
+                        "size":  "20oz",
+                        "lines":  [
+                                      "20oz 아이스컵 + 초코베이스 ETC 모아랫선(125ml) + 얼음 평평 + 우유 가득(200ml) + 섞어줌"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코베이스 75ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-003",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "초코라떼",
+                        "temp":  "ICE",
+                        "size":  "32oz/1.1L",
+                        "lines":  [
+                                      "32oz: 32oz 아이스컵 + (초코베이스 215g(200ml) + 우유 300ml = 섞어줌) + 얼음 평평",
+                                      "1.1L: 1.1L 보틀 + (초코베이스 215g(200ml) + 우유 300ml = 섞어줌) + 얼음 완성선까지"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-005",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "리얼초코라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (온수 50ml + 초코파우더 4래들 = 섞어줌) + 스팀우유(스팀전 200ml) + 초코휘핑 + 초코드리즐 + 다크블라썸 1래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코파우더 2래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-006",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "리얼초코라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 초코베이스 ETC 모아랫선(125ml) + 얼음 평평 + 우유 컵윗선(125ml) + 섞어줌 + 초코휘핑 + 초코드리즐 + 다크블라썸 1래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코베이스 75ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-007",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "마시멜로우 초코라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (온수 50ml + 초코파우더 4래들 = 섞어줌) + 스팀우유(스팀전 200ml) + 초코휘핑 + 초코드리즐 + 화이트초코드리즐 + 마시멜로우 1래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코파우더 2래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-008",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "마시멜로우 초코라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 초코베이스 ETC 모아랫선(125ml) + 얼음 평평 + 우유 컵윗선(125ml) + 섞어줌 + 초코휘핑 + 초코드리즐 + 화이트초코드리즐 + 마시멜로우 1래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 초코베이스 75ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-009",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "녹차라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 온수 50ml + 녹차파우더 2.5래들 + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 녹차파우더 2래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-010",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "녹차라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 녹차베이스 컵아랫선(75ml) + 얼음 평평 + 우유 가득(200ml) + 섞어줌"
+                                  ],
+                        "duldalge":  "★ 덜달게: 녹차베이스 50ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-011",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "우지 딥 말차라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (계량컵: 온수 30g + 말차파우더 3t = 섞어줌) + 녹차베이스 40g + 슈가시럽 2p = 섞어줌 + 스팀 딥베이스 225ml/g"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 2p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-012",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "우지 딥 말차라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 수북히 + 딥베이스 O윗선(200ml/g) + (계량컵: 온수 30g + 말차파우더 3t = 섞어줌) + 녹차베이스 30g + 슈가시럽 2p = 섞어줌"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 2p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-013",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "우지 딥 말차베리 라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 딸기베이스 100g + 얼음 평평 + 딥베이스 150ml/g + (계량컵: 온수 25ml/g + 말차파우더 1t = 섞어줌) + 녹차베이스 30g = 섞어줌 + 냉동딸기다이스 4래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-014",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "고구마라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (고구마퓨레 100g + 슈가시럽 1p) + 스팀우유(스팀전 250ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 제거",
+                        "caution":  "⚠️ 최대한 뜨겁게",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-015",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "고구마라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + (블렌더: 우유 250ml + 고구마퓨레 100g + 슈가시럽 1p)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-016",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "토피넛라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (온수 50ml + 피칸시럽 1p + 슈가시럽 1p + 토피넛파우더 3래들) + 스팀우유(스팀전 225ml) + 아몬드슬라이스 0.5래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-017",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "토피넛라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + (블렌더: 우유 250ml + 피칸시럽 1p + 슈가시럽 1p + 토피넛파우더 3래들) + 아몬드슬라이스 0.5래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-018",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "밀키티",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (온수 50ml + 홍차파우더 2래들 + 연유 1래들) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 홍차파우더 1.5래들 + 연유 0.5래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-019",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "밀키티",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + (블렌더: 우유 250ml + 홍차파우더 2래들 + 연유 1래들)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 홍차파우더 1.5래들 + 연유 0.5래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-020",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "곡물라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (온수 50ml + 오곡파우더 4래들 + 슈가시럽 1p = 섞어줌) + 스팀우유 1/2(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 제거",
+                        "caution":  "⚠️ 스팀우유 1/2 넣고 혼합",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-021",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "곡물라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + (블렌더: 우유 250ml + 오곡파우더 4래들 + 슈가시럽 1p)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 1p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-022",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "일그레이 초코라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 온수 50ml + 홍차파우더 1래들 + 초코소스 1.5p + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 홍차파우더 0.5래들 + 초코소스 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-023",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "일그레이 초코라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 얼음 평평 + (블렌더: 우유 250ml + 홍차파우더 1래들 + 초코소스 1.5p)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 홍차파우더 0.5래들 + 초코소스 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-024",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "울무차",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (온수 50ml + 울무파우더 5래들 + 슈가시럽 2p + 소금베이스 1t) + 스팀우유(스팀전 225ml) + 아몬드분태 1t"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 2p만 제거",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-025",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "울무차",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 1번: 우유 250ml + 울무파우더 5래들 + 슈가시럽 2p + 소금베이스 1t + 얼음 컵윗선) + 아몬드분태 1t"
+                                  ],
+                        "duldalge":  "★ 덜달게: 슈가시럽 2p만 제거",
+                        "caution":  "⚠️ ICE 블렌더 얼음넣고 갈기",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-026",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "민트초코라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (온수 50ml + 민트초코파우더 2래들 + 민트시럽 1p + 다크블라썸 1래들) + 스팀우유(스팀전 225ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 민트초코파우더 1.5래들 + 민트시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-027",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "민트초코라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 다크블라썸 1래들 + 얼음 평평 + (블렌더 1번: 우유 250ml + 민트초코파우더 2래들 + 민트시럽 1p) + 다크블라썸 1래들"
+                                  ],
+                        "duldalge":  "★ 덜달게: 민트초코파우더 1.5래들 + 민트시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-028",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "할미숫가루 (20oz)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 1번: 물 200g + 오곡파우더 6래들 + 설탕베이스 60g(50ml)) + 얼음 수북히 + 섞어줌"
+                                  ],
+                        "duldalge":  "★ 덜달게: 설탕베이스 30g(25ml)만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-029",
+                        "category":  "논커피 / 블렌더 X",
+                        "name":  "할미숫가루 (32oz / 1.1L)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + (블렌더 1번: 물 400g + 오곡파우더 11래들 + 설탕베이스 120g(100ml)) + 얼음 수북히 + 섞어줌"
+                                  ],
+                        "duldalge":  "★ 덜달게: 설탕베이스 60g(50ml)만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-030",
+                        "category":  "논커피 / 블렌더 O",
+                        "name":  "피넛크림B 라떼",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 2shot + (블렌더: 에버휩 400ml + 피넛소스 200g + 카라멜시럽 6p)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-논커피-031",
+                        "category":  "논커피 / 블렌더 O",
+                        "name":  "피넛크림B 라떼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 1번: 우유 250ml + 피넛크림B + 얼음 평평)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-허브티-001",
+                        "category":  "허브티 \u0026 아이스티",
+                        "name":  "허브티 (페퍼민트/캐모마일/히비스커스/얼그레이)",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 티백 1ea + 온수 9부(425ml)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-허브티-002",
+                        "category":  "허브티 \u0026 아이스티",
+                        "name":  "허브티 (페퍼민트/캐모마일/히비스커스/얼그레이)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 얼음 수북히 + (계량컵: 온수 200ml + 티백 2ea = 3분 우리기) + 섞어줌"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "⚠️ 양이 모자람 시 얼음으로 채우기",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-허브티-003",
+                        "category":  "허브티 \u0026 아이스티",
+                        "name":  "아이스티 (복숭아/석류) 24oz",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (해당 아이스티 베이스 컵아랫선(120ml)) + 얼음 평평 + 물 가득(200ml) + 섞어줌 + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 아이스티B 100ml + 물 225ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-허브티-004",
+                        "category":  "허브티 \u0026 아이스티",
+                        "name":  "아이스티 (복숭아/석류) 32oz",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "32oz 아이스컵 + (해당 아이스티 베이스 200ml + 물 300ml = 섞어줌) + 얼음 평평"
+                                  ],
+                        "duldalge":  "★ 덜달게: 아이스티B 175ml + 물 325ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-허브티-005",
+                        "category":  "허브티 \u0026 아이스티",
+                        "name":  "아이스티 (복숭아/석류) 1.1L",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "1.1L 보틀 + (해당 아이스티 베이스 200ml + 물 300ml = 섞어줌) + 얼음 완성선까지"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-허브티-006",
+                        "category":  "허브티 \u0026 아이스티",
+                        "name":  "제로 복숭아아이스티",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (계량컵: 제로복숭아아이스티파우더 50g + 온수 75g = 섞어줌) + 물 200ml + 얼음 수북히 + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 아이스티파우더 30g + 온수 75g 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-001",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "유자차/레몬차/청귤차",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 해당 과일청 4래들 + 온수 8부(350ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당 과일청 3래들만 투입",
+                        "caution":  "⚠️ 레몬차: 레몬슬라이스 추가 토핑",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-002",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "유자차/레몬차/청귤차",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (해당 과일청 5래들 + 온수 50ml = 섞어줌) + 얼음 평평 + 물 가득(200ml) + 섞어줌 + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당 과일청 4래들만 투입",
+                        "caution":  "⚠️ 레몬차: 레몬슬라이스 추가 토핑",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-003",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "자몽차/생강차",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (해당 과일청 3래들 + 슈가시럽 1p) + 온수 8부(350ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당 과일청 2래들 + 슈가시럽 1p 투입",
+                        "caution":  "⚠️ 자몽차: 자몽슬라이스 추가 토핑",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-004",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "자몽차/생강차",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (해당과일청 3래들 + 슈가시럽 2p + 온수 50ml = 섞어줌) + 얼음 평평 + 물 가득(200ml) + 섞어줌 + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 해당 과일청 2래들 + 슈가시럽 1p 투입",
+                        "caution":  "⚠️ 자몽차: 자몽슬라이스 추가 토핑",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-005",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "레몬생강차",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (레몬청 3래들 + 생강청 1래들 + 슈가시럽 1p) + 온수 8부(350ml) + 레몬슬라이스 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 레몬청 2래들 + 생강청 0.5래들 + 슈가시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-006",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "레몬생강차",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (레몬청 3래들 + 생강청 1래들 + 슈가시럽 2p + 온수 50ml = 섞어줌) + 얼음 평평 + 물 가득(200ml) + 섞어줌 + 레몬슬라이스 1ea + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 레몬청 2래들 + 생강청 0.5래들 + 슈가시럽 1p 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-007",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "얼그레이 레몬차",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 레몬청 3래들 + 얼그레이티백 1ea + 온수 8부(350ml) + 레몬슬라이스 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 레몬청 2래들만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-008",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "얼그레이 레몬차",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 레몬청 3래들 + (계량컵: 온수 200ml + 얼그레이티백 1ea = 1분 우리기) + 얼음 평평 + 섞어줌 + 레몬슬라이스 1ea + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 레몬청 2래들 + 온수 225ml + 얼그레이티백 1ea 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-009",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "모히또 레몬홍차",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + 레몬청 2래들 + 복숭아아이스티B 1래들 + 모히또시럽 2p + 온수 8부(350ml) + (티백 30초 우린 후 제거) + 레몬슬라이스 1ea / ★ 덜달게: 레몬청 1래들 + 복숭아B 0.5래들 + 모히또시럽 1p 투입"
+                                  ],
+                        "duldalge":  "★ 덜달게: 레몬청 1래들 + 복숭아B 0.5래들 + 모히또시럽 1p 투입",
+                        "caution":  "20oz 종이컵 + 레몬청 2래들 + 복숭아아이스티B 1래들 + 모히또시럽 2p + 온수 8부(350ml) + (티백 30초 우린 후 제거) + 레몬슬라이스 1ea",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-010",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "모히또 레몬홍차",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (레몬청 2래들 + 복숭아아이스티B 1래들 + 모히또시럽 2p = 섞어줌) + (계량컵: 온수 200ml + 얼그레이티백 1ea = 30초 우린 후 제거) + 얼음 평평 + 섞어줌 + 레몬슬라이스 1ea + 민트잎 1ea / ★ 덜달게: 레몬청 1래들 + 복숭아B 0.5래들 + 모히또시럽 1p + 온수 225ml 투입"
+                                  ],
+                        "duldalge":  "★ 덜달게: 레몬청 1래들 + 복숭아B 0.5래들 + 모히또시럽 1p + 온수 225ml 투입",
+                        "caution":  "24oz 아이스컵 + (레몬청 2래들 + 복숭아아이스티B 1래들 + 모히또시럽 2p = 섞어줌) + (계량컵: 온수 200ml + 얼그레이티백 1ea = 30초 우린 후 제거) + 얼음 평평 + 섞어줌 + 레몬슬라이스 1ea + 민트잎 1ea",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-011",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "애플 히비스커스",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (사과청 1래들 + 애플사이더 2래들 + 히비스커스티백 1ea) + 온수 8부(350ml)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 사과청 1래들 + 애플사이더 0.5래들 + 온수 225ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-012",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "애플 히비스커스",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + 사과청 2래들 + (계량컵: 온수 200ml + 애플사이더 1래들 = 섞어줌 + 히비스커스티백 2ea = 1분 우리기) + 얼음 평평 + 섞어줌 + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 사과청 1래들 + 애플사이더 0.5래들 + 온수 225ml 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-013",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "망고오렌망",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 자몽시럽 1p + 망고오렌지베이스 150ml + 얼음 수북히 + (계량컵: 온수 100ml + 얼그레이티백 1ea = 1분 우린 후 제거) + 얼음 5알 + 컵 롤링 + 오렌지슬라이스 반쪽 3ea (벽면 2ea + 상단 1ea) + 민트잎 1ea / ★ 덜달게: 망고오렌지B 125ml + (온수 125ml + 얼그레이티백 1ea) 투입"
+                                  ],
+                        "duldalge":  "★ 덜달게: 망고오렌지B 125ml + (온수 125ml + 얼그레이티백 1ea) 투입",
+                        "caution":  "20oz 아이스컵 + 자몽시럽 1p + 망고오렌지베이스 150ml + 얼음 수북히 + (계량컵: 온수 100ml + 얼그레이티백 1ea = 1분 우린 후 제거) + 얼음 5알 + 컵 롤링 + 오렌지슬라이스 반쪽 3ea (벽면 2ea + 상단 1ea) + 민트잎 1ea",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-014",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "우지말차 유자티",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (유자청 3래들 + 슈가시럽 2p + 물 150ml/g = 섞어줌) + 얼음 수북히 + (계량컵: 온수 30g + 말차파우더 2t = 섞어줌)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-015",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "자몽허니 블랙티",
+                        "temp":  "HOT",
+                        "lines":  [
+                                      "20oz 종이컵 + (유자청 1t + 자몽청 3래들 + 온수 100ml = 섞어줌) + 온수 200ml + 얼그레이티백 1ea = 1분 우린 후 제거"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "20oz 종이컵 + (유자청 1t + 자몽청 3래들 + 온수 100ml = 섞어줌) + 온수 200ml + 얼그레이티백 1ea = 1분 우린 후 제거",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-과일티-016",
+                        "category":  "과일티 \u0026 프리미엄 과일티",
+                        "name":  "자몽허니 블랙티",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (유자청 1래들 + 자몽청 3래들 + 물 100ml/g = 섞어줌) + 얼음 수북히 + (계량컵: 온수 100ml + 얼그레이티백 1ea = 1분 우린 후 제거)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "24oz 아이스컵 + (유자청 1래들 + 자몽청 3래들 + 물 100ml/g = 섞어줌) + 얼음 수북히 + (계량컵: 온수 100ml + 얼그레이티백 1ea = 1분 우린 후 제거)",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-주스-001",
+                        "category":  "주스",
+                        "name":  "리얼홍시주스",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 1번: 물 250ml + 냉동홍시 180g + 황설탕 2래들 + 프루믹스파우더 1t) + 얼음 가득 + 냉동홍시 1/6ea + 민트잎 1ea"
+                                  ],
+                        "duldalge":  "★ 덜달게: 황설탕 1래들만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-001",
+                        "category":  "프라페",
+                        "name":  "더블커피칩 프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 우지믹스커피베이스 200ml + 원두 1t + 얼음 평평) + 휘핑 or 아이스크림 + 분쇄원두 기울여서 3톡"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-002",
+                        "category":  "프라페",
+                        "name":  "자바칩프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 프라페베이스 100ml + 초코베이스 100ml + 다크블라썸 1래들 + 얼음 평평) + 초코휘핑 or 아이스크림 + 초코드리즐 + 다크블라썸 1래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-003",
+                        "category":  "프라페",
+                        "name":  "녹차프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 프라페베이스 150ml + 녹차베이스 100ml + 얼음 평평) + 휘핑 or 아이스크림 + 녹차파우더 기울여서 3톡"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-004",
+                        "category":  "프라페",
+                        "name":  "화이트초코 프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 프라페베이스 200ml + 화이트초코소스 1.5p + 얼음 평평) + 휘핑 or 아이스크림 + 화이트초코소스드리즐"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-005",
+                        "category":  "프라페",
+                        "name":  "오레오프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 쿠키분태 1래들 + (블렌더: 프라페베이스 250ml + 쿠키분태 3래들 + 얼음 평평) + 휘핑 or 아이스크림 + 컷팅오레오 8ea + 쿠키분태 0.5래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-006",
+                        "category":  "프라페",
+                        "name":  "카라멜프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 프라페베이스 100ml + 우유 50ml + 카라멜소스 2p + 냉장샷 2래들 + 얼음 평평) + 휘핑 or 아이스크림 + 카라멜드리즐"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-007",
+                        "category":  "프라페",
+                        "name":  "딸기프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 프라페베이스 150ml + 우유 50ml + 딸기퓨레 3p + 얼음 평평) + 휘핑 or 아이스크림 + 화이트초코소스드리즐 + 딸기런치 0.5래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-008",
+                        "category":  "프라페",
+                        "name":  "딸기오레오 프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 쿠키분태 1래들 + (블렌더: 프라페베이스 150ml + 우유 50ml + 딸기퓨레 1p + 쿠키분태 2래들 + 얼음 평평) + 휘핑 or 아이스크림 + 쿠키분태 0.5래들 + 딸기런치 0.5래들 + 오레오 1ea(비틀어서)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-009",
+                        "category":  "프라페",
+                        "name":  "올무크림 프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 우유 150ml + 올무파우더 5래들 + 슈가시럽 3p + 소금베이스 1t + 얼음 평평) + 아이스크림 컵 중앙 + 올무크림 2래들 + 아몬드분태 1t"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-010",
+                        "category":  "프라페",
+                        "name":  "민트초코 프라페",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 우유 150ml + 민트초코파우더 3래들 + 민트시럽 2p + 슈가시럽 1p + 다크블라썸 1래들 + 얼음 평평) + 초코휘핑 or 아이스크림 + 쿠키분태 0.5래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-011",
+                        "category":  "프라페",
+                        "name":  "딥 밀크쉐이크",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 프라페베이스 100g + 우유 100g + 연유 2래들(44g) + 슈가시럽 4p + 얼음 수북히) + 휘핑크림 or 아이스크림 + 홍체리 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-012",
+                        "category":  "프라페",
+                        "name":  "로열밀키티 밀크쉐이크",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더: 프라페베이스 100g + 우유 75g + 연유 2래들(44g) + 홍차파우더 1.5래들(26g) + 얼음 수북히) + 휘핑크림 or 아이스크림 + 홍체리 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-FRAP-013",
+                        "category":  "프라페",
+                        "name":  "리얼초코 밀크쉐이크",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 컵 벽면 초코드리즐 + (블렌더: 프라페베이스 100g + 우유 75g + 연유 2래들(44g) + 초코파우더 4래들(61g) + 쿠키분태 1래들(9g) + 얼음 수북히) + 휘핑크림 or 아이스크림 + 홍체리 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-001",
+                        "category":  "소프트 아이스크림",
+                        "name":  "소프트 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 6바퀴"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-002",
+                        "category":  "소프트 아이스크림",
+                        "name":  "아포가토",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 6바퀴 + 냉장샷 2래들(1shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-003",
+                        "category":  "소프트 아이스크림",
+                        "name":  "딸기 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 6바퀴 + 딸기베이스 50ml + 냉동딸기다이스 2래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-004",
+                        "category":  "소프트 아이스크림",
+                        "name":  "블루베리 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 6바퀴 + 블루베리리플젬 1래들 + 냉동블루베리 2래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-005",
+                        "category":  "소프트 아이스크림",
+                        "name":  "리얼말차 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 6바퀴 + 녹차베이스 25ml + 말차파우더 톡톡(4번)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-006",
+                        "category":  "소프트 아이스크림",
+                        "name":  "초코쉘 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (초코쉘 = 컵 벽면 한 바퀴) + 아이스크림 6바퀴 + 초코쉘 30g"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-007",
+                        "category":  "소프트 아이스크림",
+                        "name":  "허니 그래놀라 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 6바퀴 + 그래놀라 2래들 + 꿀 1래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-008",
+                        "category":  "소프트 아이스크림",
+                        "name":  "오레오 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 6바퀴 + 초코베이스 25ml + 쿠키분태 1래들 + 초코런치볼 2t + 컷팅오레오 4ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-009",
+                        "category":  "소프트 아이스크림",
+                        "name":  "츄러스 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (에어프라이어: 츄러스 1ea 190도 5분 조리 + 시나몬슈가 코팅) + 아이스크림 6바퀴 + 조리된 츄러스 토핑"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-010",
+                        "category":  "소프트 아이스크림",
+                        "name":  "솔티 카라멜 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (카라멜소스 0.5p + 소금베이스 0.5t = 섞어줌 = 벽면 굴리기) + 아이스크림 5바퀴 + 메이플팝콘 2래들 + 카라멜소스 드리즐"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-011",
+                        "category":  "소프트 아이스크림",
+                        "name":  "딸기 초코쉘 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 5바퀴 + 딸기베이스 25ml + 초코쉘 30g + 냉동딸기다이스 3래들 + 초코런치볼 2t"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-012",
+                        "category":  "소프트 아이스크림",
+                        "name":  "티라미수 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (냉장샷 1래들 + 초코베이스 25ml = 섞어줌 = 벽면 굴리기) + 아이스크림 5바퀴 + 핑거쿠키 2ea + 코코아파우더 톡톡(6번)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-013",
+                        "category":  "소프트 아이스크림",
+                        "name":  "도넛 딸기 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 4바퀴 + 딸기베이스 25ml + 글레이즈도넛 1ea + 휘핑크림 한바퀴 + 홍체리 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-014",
+                        "category":  "소프트 아이스크림",
+                        "name":  "도넛 블루베리 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 4바퀴 + 블루베리리플젬 1래들 + 글레이즈도넛 1ea + 휘핑크림 한바퀴 + 홍체리 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-ICEC-015",
+                        "category":  "소프트 아이스크림",
+                        "name":  "도넛 초코 아이스크림",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 아이스크림 4바퀴 + (초코쉘 30g + 초코런치볼 2t) + 글레이즈도넛 1ea + 휘핑크림 한바퀴 + 홍체리 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-001",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "리얼수박주스 (20oz)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 1번: 물 200ml/g + 황설탕 2래들 + 프루믹스 1t + 수박다이스 200g) + 얼음 평평"
+                                  ],
+                        "duldalge":  "★ 덜달게: 황설탕 1래들 + 프루믹스 1t 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-002",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "리얼수박주스 (32oz)",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + (블렌더 1번: 물 400ml/g + 황설탕 3래들 + 프루믹스 1래들 + 수박다이스 300g) + 얼음 평평"
+                                  ],
+                        "duldalge":  "★ 덜달게: 황설탕 1.5래들 + 프루믹스 1래들 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-003",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "수박리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (블렌더 1번: 물 200ml/g + 황설탕 2래들 + 프루믹스 1t + 수박다이스 150g) + 얼음 수북히 + (에스프레소 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 황설탕 1래들 + 프루믹스 1t 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-004",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "디카페인 수박리카노",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (블렌더 1번: 물 200ml/g + 황설탕 2래들 + 프루믹스 1t + 수박다이스 150g) + 얼음 수북히 + (디카페인 에스프레소 2shot)"
+                                  ],
+                        "duldalge":  "★ 덜달게: 황설탕 1래들 + 프루믹스 1t 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-005",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "수박 캐모마일 자몽 리프레쉬티",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "24oz 아이스컵 + (블렌더 3번: 물 200ml/g + 캐모마일베이스 2래들(40g) + 자몽시럽 1p + 수박다이스 100g) + 얼음 평평 + 자몽슬라이스 1ea + 애플민트 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-006",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "수박 알로에 요구르트",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 알로에토핑 2래들 + 요구르트베이스 3래들(70g) + 물 150ml/g = 섞어줌 + 얼음 컵윗선 + (블렌더 1번: 물 75ml/g + 황설탕 1래들 + 수박다이스 100g)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-007",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "수박 젤라또 쫀득빙수",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 3번: 물 75ml/g + 연유 2래들 + 황설탕 2래들 + 수박다이스 100g + 얼음 컵윗선) + 쌀젤라또 1스쿱 + 빙수팥 2스쿱 + 킷팅참쌀떡 2ea + 알로에토핑 1래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-008",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "단팥 젤라또 쫀득빙수",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 3번: 우유 75ml/g + 연유 2래들 + 황설탕 1래들 + 오곡파우더 1래들 + 얼음 평평) + 오곡파우더 1래들 + 쌀젤라또 1스쿱 + 빙수팥 2스쿱 + 킷팅참쌀떡 2ea + 아몬드분태 1래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-009",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "말차 젤라또 쫀득빙수",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 3번: 우유 75ml/g + 연유 2래들 + 황설탕 1래들 + 말차파우더 2t + 얼음 평평) + 오곡파우더 1래들 + 쌀젤라또 1스쿱 + 빙수팥 2스쿱 + 킷팅참쌀떡 2ea + 아몬드분태 1래들"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-010",
+                        "category":  "2026 여름시즌 1차",
+                        "name":  "모나카 젤라또 아포가토",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + (블렌더 3번: 냉장샷 50ml/g + 연유 1래들 + 얼음 평평) + 쌀젤라또 1스쿱 + 킷팅참쌀떡 1ea + 빙수팥 1래들 + 홍체리 1ea + 모나카 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-011",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "딥 플랫화이트",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 딥베이스 125ml/g + 얼음 평평 + (에스프레소 2shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "⚠️ 포터필터 스파웃 밑에 컵을 두고 에스프레소 추출",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-012",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "디카페인 딥 플랫화이트",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 딥베이스 125ml/g + 얼음 평평 + (디카페인 에스프레소 2shot)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "⚠️ 포터필터 스파웃 밑에 컵을 두고 에스프레소 추출",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-013",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "프루티 슈퍼너",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 우지즐럼베이스 1.5래들(33g) + 우유 100ml + 얼음 12알 + (에스프레소 2shot) + 바닐라크림 가득(20g) + 체리파우더 톡톡"
+                                  ],
+                        "duldalge":  "★ 덜달게: 우지즐럼베이스 0.5래들만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-014",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "디카페인 프루티 슈퍼너",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "10oz 아이스컵 + 우지즐럼베이스 1.5래들(33g) + 우유 100ml + 얼음 12알 + (디카페인 에스프레소 2shot) + 바닐라크림 가득(20g) + 체리파우더 톡톡"
+                                  ],
+                        "duldalge":  "★ 덜달게: 우지즐럼베이스 0.5래들만 투입",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-015",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "웰니스 파인민트 스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 요거트크림 = 컵 벽면 한 바퀴 + (블렌더 3번: 물 150ml/g + 레몬퓨레 0.5p + 애플민트 3ea + 망고퓨레 2p + 꿀 1래들 + 냉동파인애플다이스 6래들(72g) + 얼음 수북히)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-016",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "웰니스 말차 요거트 스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 요거트크림 = 컵 벽면 한 바퀴 + (블렌더 3번: 우유 200ml/g + 슈가시럽 3p + 요거트파우더 4래들 + 말차파우더 3t + 얼음 수북히)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-017",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "웰니스 오트 트로피칼 스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 요거트크림 = 컵 벽면 한 바퀴 + (블렌더 3번: 오트밀크 200ml/g + 망고퓨레 2p + 요거트파우더 2래들 + 얼음 수북히) + 우지즐럼베이스 1.5래들(33g) = 블렌더 뚜껑열고 3~4회 섞어줌"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-018",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "웰니스 시트러스 카카오 스무디",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + 요거트크림 = 컵 벽면 한 바퀴 + (블렌더 3번: 레몬퓨레 1p + 망고오렌지베이스 175ml + 꿀 2래들 + 냉동블루베리 4래들(40g) + 얼음 수북히) + 다크블라썸 1래들 = 블렌더 뚜껑열고 3~4회 섞어줌"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-019",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "웰니스 복숭아 요거 스무디 볼",
+                        "temp":  "ICE",
+                        "lines":  [
+                                      "20oz 아이스컵 + (블렌더 3번: 우유 150ml/g + 슈가시럽 1p + 납작복숭아베이스 2래들(44g) + 요거트파우더 2래들 + 얼음 컵윗선) + 요거트크림 30g + 냉동복숭아다이스 3래들(30g) + 그래놀라 1래들(10g) + 꿀 드리즐(10g)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-020",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "쿨피치스",
+                        "temp":  "ICE",
+                        "size":  "24oz",
+                        "lines":  [
+                                      "24oz 아이스컵 + (물 225ml/g + 요구르트베이스 1.5래들(34g) + 납작복숭아베이스 2래들(44g) + 냉동복숭아다이스 3래들(30g) + 얼음 수북히 = 섞어줌) + 애플민트 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-021",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "쿨피치스",
+                        "temp":  "ICE",
+                        "size":  "32oz/1.1L",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + (물 300ml/g + 요구르트베이스 2래들(46g) + 납작복숭아베이스 3래들(66g) + 냉동복숭아다이스 5래들(50g) + 얼음 수북히 = 섞어줌) + 애플민트 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-022",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "쿨파인스",
+                        "temp":  "ICE",
+                        "size":  "24oz",
+                        "lines":  [
+                                      "24oz 아이스컵 + (물 225ml/g + 레몬퓨레 0.5p + 망고퓨레 0.5p + 슈가시럽 1p + 요구르트베이스 2래들(46g) + 냉동파인애플다이스 3래들(36g) + 얼음 수북히 = 섞어줌) + 애플민트 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-여름시-023",
+                        "category":  "2026 여름시즌 2차",
+                        "name":  "쿨파인스",
+                        "temp":  "ICE",
+                        "size":  "32oz/1.1L",
+                        "lines":  [
+                                      "32oz 아이스컵",
+                                      "1.1L 보틀 + (물 300ml/g + 레몬퓨레 0.5p + 망고퓨레 1p + 슈가시럽 2p + 요구르트베이스 2.5래들(57g) + 냉동파인애플다이스 4래들(48g) + 얼음 수북히 = 섞어줌) + 애플민트 1ea"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-BAK-001",
+                        "category":  "베이커리",
+                        "name":  "화이트롤슈",
+                        "temp":  "",
+                        "size":  "냉동상태에서",
+                        "lines":  [
+                                      "렌지 10초 (3~4개 15초)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-BAK-002",
+                        "category":  "베이커리",
+                        "name":  "케이크 (3종)",
+                        "temp":  "",
+                        "size":  "냉동상태에서",
+                        "lines":  [
+                                      "렌지 20초"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    },
+                    {
+                        "id":  "WOOJI-BAK-003",
+                        "category":  "베이커리",
+                        "name":  "글레이즈도넛 (2ea/4ea)",
+                        "temp":  "",
+                        "size":  "냉동상태에서",
+                        "lines":  [
+                                      "렌지 10초 (2~4개 10초",
+                                      "6개 20초",
+                                      "최대 6개까지 조리 가능)"
+                                  ],
+                        "duldalge":  "",
+                        "caution":  "",
+                        "note":  ""
+                    }
+                ]
+}
