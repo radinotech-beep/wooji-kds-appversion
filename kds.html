@@ -291,7 +291,7 @@ const DEFAULT = {
   updateManifestUrl: '',
   recipeDataUrl: '',
   menuNameSize: 15,
-  pollInterval: 1
+  pollInterval: 3
 };
 const LAYOUT_MODES = ['1x2','1x3','1x4','2x2','2x3','2x4'];
 const DEFAULT_LAYOUT = '1x4';
@@ -385,7 +385,7 @@ function saveSettings() {
   config.posPort = document.getElementById('setPosPort').value.trim() || DEFAULT.posPort;
   config.token = document.getElementById('setToken').value.trim() || DEFAULT.token;
   config.didStoreCode = document.getElementById('setDidStoreCode').value.trim() || DEFAULT.didStoreCode;
-  config.pollInterval = parseInt(document.getElementById('setInterval').value) || 1;
+  config.pollInterval = Math.max(3, parseInt(document.getElementById('setInterval').value, 10) || DEFAULT.pollInterval);
   config.menuNameSize = Math.max(11, Math.min(24, parseInt(document.getElementById('setMenuNameSize').value, 10) || DEFAULT.menuNameSize));
   config.updateManifestUrl = document.getElementById('setUpdateManifestUrl').value.trim();
   config.recipeDataUrl = document.getElementById('setRecipeDataUrl').value.trim();
@@ -407,6 +407,7 @@ let pageLocked = false;
 let madeItems = {};      // {orderSeq_itemIdx: true}
 let knownSeqs = new Set();
 let pollTimer = null;
+let isPolling = false;
 let audioCtx = null;
 let lastRawOrders = [];
 let lastCompletedOrder = null;
@@ -546,6 +547,8 @@ async function callOrderApi(order) {
 
 // ── 폴링 ──
 async function poll() {
+  if(isPolling) return;
+  isPolling = true;
   try {
     const data = await fetchOrders();
     document.getElementById('syncDot').className = 'sync-dot';
@@ -587,6 +590,8 @@ async function poll() {
     lastPollError = `${getPosTarget()}\n${e?.message || e}`;
     render();
     console.error('폴링 오류:', e);
+  } finally {
+    isPolling = false;
   }
 }
 
@@ -1502,8 +1507,9 @@ setInterval(() => {
 // ── 폴링 시작 ──
 function restartPolling() {
   if(pollTimer) clearInterval(pollTimer);
-  poll();
-  pollTimer = setInterval(poll, config.pollInterval * 1000);
+  const intervalMs = Math.max(3, config.pollInterval || DEFAULT.pollInterval) * 1000;
+  setTimeout(() => poll(), 3000);
+  pollTimer = setInterval(poll, intervalMs);
 }
 
 restartPolling();
