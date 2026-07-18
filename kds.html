@@ -424,6 +424,35 @@ function getPosTarget() {
 }
 
 async function kdsPost(url, body) {
+  if(window.AndroidKds && AndroidKds.postJsonAsync) {
+    const text = await new Promise((resolve, reject) => {
+      const callbackName = '__kdsPostCb_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      const timeout = setTimeout(() => {
+        delete window[callbackName];
+        reject(new Error('POS DB 응답 시간 초과'));
+      }, 12000);
+      window[callbackName] = (result) => {
+        clearTimeout(timeout);
+        delete window[callbackName];
+        resolve(result || '');
+      };
+      try {
+        AndroidKds.postJsonAsync(url, JSON.stringify(body || {}), config.token || DEFAULT.token, getPosTarget(), callbackName);
+      } catch(e) {
+        clearTimeout(timeout);
+        delete window[callbackName];
+        reject(e);
+      }
+    });
+    try {
+      const data = JSON.parse(text);
+      if(String(data.resultCode || '') === '9999') throw new Error(data.resultMessage || 'POS API failed');
+      return data;
+    } catch(e) {
+      if(e && e.message && e.message !== text) throw e;
+      throw new Error(text || 'POS API response parse failed');
+    }
+  }
   if(window.AndroidKds && AndroidKds.postJson) {
     const text = AndroidKds.postJson(url, JSON.stringify(body || {}), config.token || DEFAULT.token, getPosTarget());
     try {
@@ -502,7 +531,7 @@ async function restoreOrderApi(order) {
 }
 
 function getOrderWaitNo(order) {
-  return String(order.orderWaitNo || order._raw?.ordKdsDetails?.[0]?.orderWaitNo || order._raw?.ordKdsHeader?.kdsSeq || '').trim();
+  return String(order.waitNo || order.orderWaitNo || order._raw?.ordKdsHeader?.orderWaitNo || order._raw?.ordKdsDetails?.[0]?.orderWaitNo || order._raw?.ordKdsHeader?.kdsSeq || order._seq || '').trim();
 }
 
 async function callDidApi(order) {
@@ -510,7 +539,14 @@ async function callDidApi(order) {
   if(!waitNo) throw new Error('waitNo not found');
   const didStoreCode = String(config.didStoreCode || DEFAULT.didStoreCode).trim();
   const storeCode = /^\d{6}$/.test(didStoreCode) ? 'FSY' + didStoreCode : didStoreCode;
-  const data = await kdsPost('/did/call', { storeCode, waitNo });
+  let data;
+  try {
+    data = await kdsPost('/did/call', { storeCode, waitNo });
+    alert('호출결과: ' + JSON.stringify(data));
+  } catch(e) {
+    alert('호출오류: ' + (e && (e.message || e) || e));
+    throw e;
+  }
   const didStatus = String(data?.data?.status || '').toLowerCase();
   console.log('DID call response:', data);
   if(data.ok === false || didStatus === 'fail' || didStatus === 'error') {
@@ -520,6 +556,24 @@ async function callDidApi(order) {
 }
 
 async function callOrderApi(order) {
+  const callDetails = order._raw.ordKdsDetails || [];
+  const callStatusItems = callDetails.map(d => ({
+    callStatus: 'Y',
+    index: d.index || ''
+  })).filter(d => d.index);
+  if(callStatusItems.length) {
+    await kdsPost(`/api/kds/updateItem`, {
+      detailSortType: "0",
+      isRequireReturnKdsList: true,
+      isUseKdsNoInOfferMode: false,
+      kdsItemList: callStatusItems,
+      kdsViewType: "2",
+      latestTime: 0,
+      maxHeaderCount: 99,
+      searchKeyword: ""
+    });
+  }
+
   await callDidApi(order);
 
   const url = `/api/kds/updateItem`;
